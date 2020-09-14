@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Department Management
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>
+                <a href="index.html"> RMS </a>
+            </h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client
+                    Management </a>
+            </li>
+            <li>
+                <a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i>
+                    Department Management </a>
+            </li>
+            <li>
+                <a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team
+                    Management </a>
+            </li>
+            <li>
+                <a href="unit_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Unit
+                    Management </a>
+            </li>
+            <li>
+                <a href="requisitions_item_management.html" style="text-decoration: none;"><i
+                        class="fa fa-angle-right"></i> Requisitions Item
+                    Management </a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                        class="fa fa-angle-right"></i> Project
+                    Management</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="add_new_project.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i>
+                            Add New Project </a>
+                    </li>
+                    <li>
+                        <a href="project_management.html" style="text-decoration: none;"><i
+                                class="fa fa-angle-right"></i> View All Projects</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                        class="fa fa-angle-right"></i> Site
+                    Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="add_new_site.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add
+                            New Site</a>
+                    </li>
+                    <li>
+                        <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i>
+                            View All Sites</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false"
+                   class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
+                <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+                    <li>
+                        <a href="add_new_requisition.html" style="text-decoration: none;"><i
+                                class="fa fa-angle-right"></i> Add New Requisition</a>
+                    </li>
+                    <li>
+                        <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i>
+                            View All Requisition</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Page Content -->
+    <div id="content">
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-default">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal" style=""></i>
+                                </a>
+
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Notifications</h5>
+                                                <button class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="login_form.html">
+                                <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <!--Navbar End-->
+        <!--Profile Modal Start-->
+        <!--End Modal: Login with Avatar Form-->
+
+        <div class="layout_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card table-card repeater pdb15">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    Form Repeater
+                                </h3>
+
+                            </div>
+
+                            <div class="allforms">
+                                <div class="card-body formarea filtercard">
+                                    <div class="extraform">
+                                        <div class="row">
+                                            <div class="col-md-12"> &nbsp;</div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Name"></div>
+                                            </div>
+
+                                            <div class="col">
+
+                                                <textarea class="form-control" rows="1"></textarea>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="col-md-12 ">
+                                    <a href="#" id="addNewForm"
+                                       class="btn btn-sm btn-info btn-base float-left fl3 mt15"><i
+                                            class="fa fa-plus-square-o"></i> &nbsp; ADD NEW</a>
+
+                                    <button class="btn btn-sm btn-info btn-base float-right mt15 fr3">Save Form Data</button>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+
+                            </div>
+                        </div>
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    <i class="fa fa-info-circle">
+                                    </i>
+                                    Requisition Management system
+                                </h3>
+                                <div class="float-right">
+                                    <a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+                                    <a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body formarea filtercard table-responsive">
+                                <table class="table table-bordered mb0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Project ID:
+                                            <span class="base-color">
+															1029
+														</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Client Name :
+                                            <span class="base-color">
+															Munna
+														</span>
+                                        </td>
+                                        <td> Project Budget : <span class="base-color">  20,000 </span>
+
+                                        </td>
+                                        <td>Project Status : <span class="base-color">Running</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Start date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>
+                                            Completion Date: <span class="base-color">28/07/2020</span>
+                                        </td>
+
+
+                                        <td>
+                                            Expected Completion Date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>Assigned Team: <span class="base-color">A</span>
+
+                                        </td>
+                                        <td> Requisition: <span class="base-color">Enable</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Assigned Department: <span class="base-color">Civil</span>
+                                        </td>
+                                        <td> Accounts Approval: <span class="disapproved">Disapproved</span>
+
+                                        </td>
+                                        <td>
+                                            Managerial Approval:<br/> <span class="approved">Approved</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Administrative Approval :<br/> <span class="approved">Approved</span>
+                                        </td>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    <i class="fa fa-info-circle">
+                                    </i>
+                                    Requisition Management system
+                                </h3>
+                                <div class="float-right">
+                                    <a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+                                    <a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body formarea filtercard table-responsive">
+                                <table class="table table-bordered mb0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Project ID:
+                                            <span class="base-color">
+															1029
+														</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Client Name :
+                                            <span class="base-color">
+															Munna
+														</span>
+                                        </td>
+                                        <td> Project Budget : <span class="base-color">  20,000 </span>
+
+                                        </td>
+                                        <td>Project Status : <span class="base-color">Running</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Start date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>
+                                            Completion Date: <span class="base-color">28/07/2020</span>
+                                        </td>
+
+
+                                        <td>
+                                            Expected Completion Date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>Assigned Team: <span class="base-color">A</span>
+
+                                        </td>
+                                        <td> Requisition: <span class="base-color">Enable</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Assigned Department: <span class="base-color">Civil</span>
+                                        </td>
+                                        <td> Accounts Approval: <span class="disapproved">Disapproved</span>
+
+                                        </td>
+                                        <td>
+                                            Managerial Approval:<br/> <span class="approved">Approved</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Administrative Approval :<br/> <span class="approved">Approved</span>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    <i class="fa fa-info-circle">
+                                    </i>
+                                    Requisition Management system
+                                </h3>
+                                <div class="float-right">
+                                    <a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+                                    <a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body formarea filtercard">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered mb0">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                Project ID:
+                                                <span class="base-color">
+															1029
+														</span>
+                                            </td>
+                                            <td colspan="2">
+                                                Client Name :
+                                                <span class="base-color">
+															Munna
+														</span>
+                                            </td>
+                                            <td> Project Budget : <span class="base-color">  20,000 </span>
+
+                                            </td>
+                                            <td>Project Status : <span class="base-color">Running</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Start date: <span class="base-color">20/08/2019</span>
+                                            </td>
+                                            <td>
+                                                Completion Date: <span class="base-color">28/07/2020</span>
+                                            </td>
+
+
+                                            <td>
+                                                Expected Completion Date: <span class="base-color">20/08/2019</span>
+                                            </td>
+                                            <td>Assigned Team: <span class="base-color">A</span>
+
+                                            </td>
+                                            <td> Requisition: <span class="base-color">Enable</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Assigned Department: <span class="base-color">Civil</span>
+                                            </td>
+                                            <td> Accounts Approval: <span class="disapproved">Disapproved</span>
+
+                                            </td>
+                                            <td>
+                                                Managerial Approval:<br/> <span class="approved">Approved</span>
+                                            </td>
+                                            <td colspan="2">
+                                                Administrative Approval :<br/> <span class="approved">Approved</span>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="accordionform custom-ac">
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- DM form -->
+                                        <div class="card table-card requsition_card">
+                                            <div class="card-header customacc" data-toggle="collapse"
+                                                 data-target="#collapseOne" aria-expanded="true"
+                                                 aria-controls="collapseOne" id="headingOne">
+                                                <div class="mb-0">
+                                                    <h3 class="float-left title-full"><i class="fa fa-list"></i>
+                                                        Requsition Lists panel <span class="float-right"><i
+                                                                class="fa fa-angle-down " aria-hidden="true"></i></span>
+                                                    </h3>
+
+                                                </div>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered  ">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    Field Description
+                                                                </td>
+
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                        <table class="table table-bordered  ">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    Field Description
+                                                                </td>
+
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                        <table class="table table-bordered  ">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+                                                                <td> Field <span class="base-color">Civil</span>
+
+                                                                </td>
+                                                                <td>
+                                                                    Field <span class="base-color">Civil</span>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    Field Description
+                                                                </td>
+
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div>
+
+
+                            </div>
+                        </div>
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    <i class="fa fa-info-circle">
+                                    </i>
+                                    Requisition Management system
+                                </h3>
+                                <div class="float-right">
+                                    <a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+                                    <a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body formarea filtercard table-responsive">
+                                <table class="table table-bordered mb0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Project ID:
+                                            <span class="base-color">
+															1029
+														</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Client Name :
+                                            <span class="base-color">
+															Munna
+														</span>
+                                        </td>
+                                        <td> Project Budget : <span class="base-color">  20,000 </span>
+
+                                        </td>
+                                        <td>Project Status : <span class="base-color">Running</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Start date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>
+                                            Completion Date: <span class="base-color">28/07/2020</span>
+                                        </td>
+
+
+                                        <td>
+                                            Expected Completion Date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>Assigned Team: <span class="base-color">A</span>
+
+                                        </td>
+                                        <td> Requisition: <span class="base-color">Enable</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Assigned Department: <span class="base-color">Civil</span>
+                                        </td>
+                                        <td> Accounts Approval: <span class="disapproved">Disapproved</span>
+
+                                        </td>
+                                        <td>
+                                            Managerial Approval:<br/> <span class="approved">Approved</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Administrative Approval :<br/> <span class="approved">Approved</span>
+                                        </td>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="card table-card">
+                            <div class="card-header">
+                                <h3 class="float-left">
+                                    <i class="fa fa-info-circle">
+                                    </i>
+                                    Requisition Management system
+                                </h3>
+                                <div class="float-right">
+                                    <a href="" class="btn btn-sm btn-del mr10"><i class="fa fa-trash-o"></i></a>
+                                    <a href="" class="btn btn-sm btn-edit"><i class="fa fa-pencil"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body formarea filtercard table-responsive">
+                                <table class="table table-bordered mb0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Project ID:
+                                            <span class="base-color">
+															1029
+														</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Client Name :
+                                            <span class="base-color">
+															Munna
+														</span>
+                                        </td>
+                                        <td> Project Budget : <span class="base-color">  20,000 </span>
+
+                                        </td>
+                                        <td>Project Status : <span class="base-color">Running</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Start date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>
+                                            Completion Date: <span class="base-color">28/07/2020</span>
+                                        </td>
+
+
+                                        <td>
+                                            Expected Completion Date: <span class="base-color">20/08/2019</span>
+                                        </td>
+                                        <td>Assigned Team: <span class="base-color">A</span>
+
+                                        </td>
+                                        <td> Requisition: <span class="base-color">Enable</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Assigned Department: <span class="base-color">Civil</span>
+                                        </td>
+                                        <td> Accounts Approval: <span class="disapproved">Disapproved</span>
+
+                                        </td>
+                                        <td>
+                                            Managerial Approval:<br/> <span class="approved">Approved</span>
+                                        </td>
+                                        <td colspan="2">
+                                            Administrative Approval :<br/> <span class="approved">Approved</span>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Sayket Client add code End-->
+    </div>
+</div>
+<!--Bootstrap CDN-->
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+</script>
+<!-- for datatables -->
+<!-- jQuery library -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+</script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+</script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+</script>
+<script type="text/javascript" src="js/myscript.js">
+</script>
+<script src="js/js.js">
+</script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+
+        $('.select2').select2({
+            closeOnSelect: false
+        });
+
+
+//Clone and Remove Form Fields
+
+        $('#addNewForm').on('click', function () {
+            // $('#exercises').append('<div class="exercise"><input type="text" name="exercise[]"><button class="remove">x</button></div>');
+            $('.allforms').append('<div class="card-body formarea filtercard">\n' +
+                '                                   <div class="extraform">\n' +
+                '                                       <div class="row">\n' +
+                '                                           <div class="col-md-12"> <button  class="btn btn-sm delete-btn float-right remove"><i class="fa fa-trash-o"></i></button></div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '                                           <div class="col-md-3">\n' +
+                '                                               <div class="form-group">\n' +
+                '                                                   <input class="form-control" type="text[]" placeholder="Name"></div>\n' +
+                '                                           </div>\n' +
+                '\n' +
+                '                                           <div class="col">\n' +
+                '\n' +
+                '                                               <textarea name="info[]" class="form-control" rows="1"></textarea>\n' +
+                '\n' +
+                '                                           </div>\n' +
+                '\n' +
+                '                                       </div>\n' +
+                '                                   </div>\n' +
+                '                               </div>');
+            return false; //prevent form submission
+        });
+
+        $('.allforms').on('click', '.remove', function () {
+            $(this).parent().parent().parent().parent().remove();
+            return false; //prevent form submission
+        });
+
+    });
+</script>
+</body>
+
+</html>

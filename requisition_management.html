@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        View all Requisitions
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <a href="index.html"> RMS </a>
+                </h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="user_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> User Management RBA </a>
+                </li>
+                <li>
+                    <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
+                </li>
+                <li>
+                    <a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Department Management </a>
+                </li>
+                <li>
+                    <a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team Management </a>
+                </li>
+                <li>
+                    <a href="unit_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Unit Management </a>
+                </li>
+                <li>
+                    <a href="requisitions_item_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Requisitions Item
+						Management </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Project
+						Management</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="add_new_project.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Project </a>
+                        </li>
+                        <li>
+                            <a href="project_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Projects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Site
+						Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="add_new_site.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Site</a>
+                        </li>
+                        <li>
+                            <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Sites</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
+                    <ul class="show list-unstyled" id="homeSubmenuRequisition">
+                        <li>
+                            <a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
+                        </li>
+                        <li class="active">
+                            <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+                        </li>
+                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+            <!--Navbar Start-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-default">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <h5 class="text-center ml-5">View All Requisitions</h5>
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=""></i>
+                                </a>
+
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Notifications</h5>
+                                                <button class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login_form.html">
+                                    <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Navbar End-->
+            <!--Profile Modal Start-->
+            <!--End Modal: Login with Avatar Form-->
+            <div class="layout_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card table-card">
+                                <div class="card-header">
+                                    <h3 class="float-left">
+                                        <i class="fa fa-info-circle">
+											</i>Requisition A
+                                    </h3>
+                                    <div class="float-right">
+                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body formarea filtercard table-responsive">
+                                    <div class="teble-responsive">
+                                        <table class="table table-bordered mb0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Project:
+                                                        <span class="base-color">
+                                                                RMS
+                                                            </span>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        Site Name :
+                                                        <span class="base-color">
+                                                                SiteA
+                                                            </span>
+                                                    </td>
+                                                    <td> Submitted By: <br> <span class="base-color">  Akib  ahmed</span>
+
+                                                    </td>
+                                                    <td colspan="2"> Prepared by: <br><span class="base-color">kamal ahmed khan</span> </td>
+
+                                                    <td colspan="">Working Date:
+                                                        <br><span class="base-color">20/08/2019</span>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Payment date: <span class="base-color">20/08/2019</span>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        Payment type: <span class="base-color">Mobile Banking</span>
+                                                    </td>
+
+
+                                                    <td>
+                                                        Contact No: <span class="base-color">01245835447</span>
+                                                    </td>
+                                                    <td colspan="">
+                                                        Purpose: <span class="base-color">porttitor</span>
+                                                    </td>
+                                                    <td>Requisition Type
+                                                        <br> <span class="base-color">Prerequisite</span>
+                                                    </td>
+                                                    <td>
+                                                        Requisition Cost: <span class="base-color">15,725</span>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        Payment Remarks: <br>
+                                                        <span class="base-color"> Lorem ipsum dolor</span>
+                                                    </td>
+                                                    <td colspan="4">
+                                                        Description:
+                                                        <br> <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                    </td>
+
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="accordionform custom-ac">
+                                        <div class="accordion" id="accordionExample">
+                                            <!-- DM form -->
+                                            <div class="card table-card requsition_card">
+                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                                                    <div class="mb-0">
+                                                        <h3 class="float-left title-full"><i class="fa fa-list"></i> Requsition Lists <span class="float-right"><i
+                                                                    class="fa fa-angle-down " aria-hidden="true"></i></span>
+                                                        </h3>
+
+                                                    </div>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered  ">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Requisition <br><span class="base-color">Requisition A</span>
+                                                                        </td>
+                                                                        <td> Item <br><span class="base-color">Item A</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Unit <br><span class="base-color">Kg </span>
+                                                                        </td>
+                                                                        <td>
+                                                                            Quantity <br> <span class="base-color">75</span>
+                                                                        </td>
+                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Total Price <br> <span class="base-color">500.75 </span>
+                                                                        </td>
+
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="6">
+                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table table-bordered  ">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Requisition <br><span class="base-color">Requisition A</span>
+                                                                        </td>
+                                                                        <td> Item <br><span class="base-color">Item A</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Unit <br><span class="base-color">Kg </span>
+                                                                        </td>
+                                                                        <td>
+                                                                            Quantity <br> <span class="base-color">75</span>
+                                                                        </td>
+                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Total Price <br> <span class="base-color">500.75 </span>
+                                                                        </td>
+
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="6">
+                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card table-card">
+                                <div class="card-header">
+                                    <h3 class="float-left">
+                                        <i class="fa fa-info-circle">
+											</i>Requisition B
+                                    </h3>
+                                    <div class="float-right">
+                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body formarea filtercard table-responsive">
+                                    <div class="teble-responsive">
+                                        <table class="table table-bordered mb0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Project:
+                                                        <span class="base-color">
+                                                                ERP
+                                                            </span>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        Site Name :
+                                                        <span class="base-color">
+                                                                SiteA
+                                                            </span>
+                                                    </td>
+                                                    <td> Submitted By: <br> <span class="base-color">  Akib  ahmed</span>
+
+                                                    </td>
+                                                    <td colspan="2"> Prepared by: <br><span class="base-color">kamal ahmed khan</span> </td>
+
+                                                    <td colspan="">Working Date:
+                                                        <br><span class="base-color">20/08/2019</span>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Payment date: <span class="base-color">20/08/2019</span>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        Payment type: <span class="base-color">Mobile Banking</span>
+                                                    </td>
+
+
+                                                    <td>
+                                                        Contact No: <span class="base-color">01245835447</span>
+                                                    </td>
+                                                    <td colspan="">
+                                                        Purpose: <span class="base-color">porttitor</span>
+                                                    </td>
+                                                    <td>Requisition Type
+                                                        <br> <span class="base-color">Prerequisite</span>
+                                                    </td>
+                                                    <td>
+                                                        Requisition Cost: <span class="base-color">15,725</span>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        Payment Remarks: <br>
+                                                        <span class="base-color"> Lorem ipsum dolor</span>
+                                                    </td>
+                                                    <td colspan="4">
+                                                        Description:
+                                                        <br> <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                    </td>
+
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="accordionform custom-ac">
+                                        <div class="accordion" id="accordionExample">
+                                            <!-- DM form -->
+                                            <div class="card table-card requsition_card">
+                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                                                    <div class="mb-0">
+                                                        <h3 class="float-left title-full"><i class="fa fa-list"></i> Requsition Lists <span class="float-right"><i
+                                                                    class="fa fa-angle-down " aria-hidden="true"></i></span>
+                                                        </h3>
+
+                                                    </div>
+                                                </div>
+
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered  ">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Requisition <br><span class="base-color">Requisition A</span>
+                                                                        </td>
+                                                                        <td> Item <br><span class="base-color">Item A</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Unit <br><span class="base-color">Kg </span>
+                                                                        </td>
+                                                                        <td>
+                                                                            Quantity <br> <span class="base-color">75</span>
+                                                                        </td>
+                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Total Price <br> <span class="base-color">500.75 </span>
+                                                                        </td>
+
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="6">
+                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                            <table class="table table-bordered  ">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Requisition <br><span class="base-color">Requisition A</span>
+                                                                        </td>
+                                                                        <td> Item <br><span class="base-color">Item A</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Unit <br><span class="base-color">Kg </span>
+                                                                        </td>
+                                                                        <td>
+                                                                            Quantity <br> <span class="base-color">75</span>
+                                                                        </td>
+                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            Total Price <br> <span class="base-color">500.75 </span>
+                                                                        </td>
+
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="6">
+                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            Edit Requisition
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">
+                                                &times;
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+                                                        <label for="name">Project</label><br>
+                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <option value="volvo">Project A</option>
+                                                        <option value="saab">Project B</option>
+                                                        <option value="volvo">Project C</option>
+                                                        <option value="saab">Project D</option>
+                                                    </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+                                                        <label for="name">Site</label><br>
+                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <option value="volvo">Site A</option>
+                                                        <option value="saab">Site B</option>
+                                                        <option value="volvo">Site C</option>
+                                                        <option value="saab">Site D</option>
+                                                    </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+                                                        <label for="phone">
+                                                            Working Date:
+                                                            </label>
+                                                        <div class="input-group date" data-provide="datepicker">
+                                                            <input type="text" class="form-control" placeholder="Working Date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-th">
+                                                                    </i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+                                                        <label for="phone">
+                                                            Payment Date:
+                                                            </label>
+                                                        <div class="input-group date" data-provide="datepicker">
+                                                            <input type="text" class="form-control" placeholder="Payment Date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-th">
+                                                                    </i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+                                                        <label for="name"> Payment type</label><br>
+                                                        <select class="form-control select2 select2-hidden-accessible " style="width: 100%; " tabindex="-1 " aria-hidden="true">
+                                                            <option value=" volvo "> Mobile banking</option>
+                                                            <option value="saab ">check</option>
+                                                            <option value="volvo ">cash</option>
+                                                            <option value="saab ">others</option>
+                                                            </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 ">
+
+                                                    <div class="form-group ">
+                                                        <label>Payment Remarks</label>
+                                                        <input class="form-control " id="name " name="name " required=" " type="text " placeholder="Payment Remarks">
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-4 ">
+                                                    <div class="form-group ">
+                                                        <label>Contact No</label>
+                                                        <input class="form-control " id="name1 " name="name1 " required=" " type="text " placeholder="Contact No">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 co-sm-6">
+                                                    <div class="form-group ">
+                                                        <label>Purpose</label>
+                                                        <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6">
+                                                    <div class="form-group">
+
+                                                        <label for="phone">
+                                                            Requisition type
+                                                        </label>
+                                                        <div class="area-ckeckbox-radio">
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                                                <label for="inlineRadio1">
+                                                                    Pre Requisition
+                                                                </label>
+                                                            </div>
+                                                            <br>
+
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                                <label for="inlineRadio2">
+                                                                    Post Requisition
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 ">
+                                                    <div class="form-group ">
+                                                        <label for="comment ">Description</label>
+                                                        <textarea class="form-control " rows="3" id="comment "></textarea>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="row ">
+                                                <div class="col-md-4 ">
+                                                    <div class="form-group">
+                                                        <label for="name">Submitted By</label><br>
+                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                            <option value="volvo">Mr A</option>
+                                                            <option value="saab">Mr B</option>
+                                                            <option value="volvo">Mr C</option>
+                                                            <option value="saab">Mr D</option>
+                                                            </select>
+                                                    </div>
+                                                    <!--  -->
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <div class="form-group">
+                                                        <label for="name">Prepared By</label><br>
+                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                            <option value="volvo">Mr A</option>
+                                                            <option value="saab">Mr B</option>
+                                                            <option value="volvo">Mr C</option>
+                                                            <option value="saab">Mr D</option>
+                                                            </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <button type="button" class="btn btn-info btn-base">
+                                            Save changes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Sayket Client add code End-->
+        </div>
+    </div>
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+    </script>
+    <!-- for datatables -->
+    <!-- jQuery library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+    </script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script type="text/javascript" src="js/myscript.js">
+    </script>
+    <script src="js/js.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+
+            $('.select2').select2({
+                closeOnSelect: false
+            });
+        });
+    </script>
+</body>
+
+</html>

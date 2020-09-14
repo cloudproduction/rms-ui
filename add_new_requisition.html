@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Add new Requisition
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>
+                    <a href="index.html"> RMS </a>
+                </h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="user_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> User Management RBA </a>
+                </li>
+                <li>
+                    <a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
+                </li>
+                <li>
+                    <a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Department Management </a>
+                </li>
+                <li>
+                    <a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team Management </a>
+                </li>
+                <li>
+                    <a href="unit_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Unit Management </a>
+                </li>
+                <li>
+                    <a href="requisitions_item_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Requisitions Item
+						Management </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Project
+						Management</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="add_new_project.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Project </a>
+                        </li>
+                        <li>
+                            <a href="project_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Projects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Site
+						Management</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="add_new_site.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Site</a>
+                        </li>
+                        <li>
+                            <a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Sites</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
+                    <ul class="show list-unstyled" id="homeSubmenuRequisition">
+                        <li class="active">
+                            <a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
+                        </li>
+                        <li>
+                            <a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+                        </li>
+                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+            <!--Navbar Start-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-default">
+							<i class="fas fa-bars">
+							</i>
+						</button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fas fa-align-justify">
+							</i>
+						</button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=" margin-right: 10px; font-size: 20px;"></i>
+                                </a>
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>
+                                                    Notifications
+                                                </h5>
+                                                <button class="close" data-dismiss="modal">
+														&times;
+													</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login_form.html">
+                                    <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Navbar End-->
+            <!--Profile Modal Start-->
+            <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+                            <button class="close" data-dismiss="modal">
+									<i class="fas fa-times" style="font-size: 15px;">
+									</i>
+								</button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body text-center mb-1">
+                            <h3 style="color: palevioletred">
+                                Farhana Afreen
+                            </h3>
+                            <hr>
+                            <div class="md-form ml-0 mr-0">
+                                <button class="btn btn-cyan mt-1">
+										<i class="fas fa-user" style="margin-right: 5px">
+										</i>
+										Profile
+									</button>
+                            </div>
+                            <hr>
+                            <div class="text-center mt-1">
+                                <button class="btn btn-cyan mt-1">
+										<i class="fas fa-cog" style="margin-right: 5px">
+										</i>
+										Setting
+									</button>
+                            </div>
+                            <hr>
+                            <div class="text-center mt-1">
+                                <button class="btn btn-cyan mt-1">
+										<i class="fas fa-power-off" style="margin-right: 5px">
+										</i>
+										Log Out
+									</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal: Login with Avatar Form-->
+            <div class="layout_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb15">
+                                <a href="#" class="btn btn-sm btn-info btn-base float-right">
+                                    <i class="fa fa-list" aria-hidden="true"></i> &nbsp; Table List
+                                </a>
+                            </div>
+                            <div class="card table-card">
+                                <div class="card-header">
+                                    <h3 class="float-left">
+                                        <i class="fa fa-info-circle">
+											</i> Add New Requisition
+                                    </h3>
+                                </div>
+                                <div class="card-body formarea filtercard">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name">Project</label><br>
+                                                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <option value="volvo">Project A</option>
+                                                <option value="saab">Project B</option>
+                                                <option value="volvo">Project C</option>
+                                                <option value="saab">Project D</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name">Site</label><br>
+                                                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                <option value="volvo">Site A</option>
+                                                <option value="saab">Site B</option>
+                                                <option value="volvo">Site C</option>
+                                                <option value="saab">Site D</option>
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="phone">
+                                                    Working Date:
+													</label>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control" placeholder="Working Date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-th">
+															</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="phone">
+                                                    Payment Date:
+													</label>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control" placeholder="Payment Date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-th">
+															</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name"> Payment type</label><br>
+                                                <select class="form-control" style="width: 100%; " tabindex="-1 " aria-hidden="true">
+                                                    <option value=" volvo "> Mobile banking</option>
+                                                    <option value="saab ">check</option>
+                                                    <option value="volvo ">cash</option>
+                                                    <option value="saab ">others</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 ">
+
+                                            <div class="form-group ">
+                                                <label>Payment Remarks</label>
+                                                <input class="form-control " id="name " name="name " required=" " type="text " placeholder="Payment Remarks">
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-4 ">
+                                            <div class="form-group ">
+                                                <label>Contact No</label>
+                                                <input class="form-control " id="name1 " name="name1 " required=" " type="text " placeholder="Contact No">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 co-sm-6">
+                                            <div class="form-group ">
+                                                <label>Purpose</label>
+                                                <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-group">
+
+                                                <label for="phone">
+                                                    Requisition type
+                                                </label>
+                                                <div class="area-ckeckbox-radio">
+                                                    <div class="radio radio-info radio-inline">
+                                                        <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                                        <label for="inlineRadio1">
+                                                            Pre Requisition
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio radio-info radio-inline ml15">
+                                                        <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                        <label for="inlineRadio2">
+                                                            Post Requisition
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 ">
+                                            <div class="form-group ">
+                                                <label for="comment ">Description</label>
+                                                <textarea class="form-control " rows="3" id="comment "></textarea>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-md-4 ">
+                                            <div class="form-group">
+                                                <label for="name">Submitted By</label><br>
+                                                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option value="volvo">Mr A</option>
+                                                    <option value="saab">Mr B</option>
+                                                    <option value="volvo">Mr C</option>
+                                                    <option value="saab">Mr D</option>
+                                                    </select>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <div class="form-group">
+                                                <label for="name">Prepared By</label><br>
+                                                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option value="volvo">Mr A</option>
+                                                    <option value="saab">Mr B</option>
+                                                    <option value="volvo">Mr C</option>
+                                                    <option value="saab">Mr D</option>
+                                                    </select>
+                                            </div>
+                                            <!--  -->
+
+                                        </div>
+
+
+
+
+                                        <!-- <div class="col-12 "><br>
+                                            <button class="btn btn btn-info btn-base float-right ">
+													<i class="fa fa-save ">
+													</i>
+													Submit
+												</button>
+                                        </div> -->
+                                    </div>
+
+                                </div>
+                                <div class="card table-card repeater pdb15">
+                                    <div class="card-header">
+                                        <h3 class="float-left">
+                                            Select Requisition Item
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="allforms">
+                                        <div class="card-body formarea filtercard">
+                                            <div class="extraform">
+                                                <div class="row">
+                                                    <div class="col-md-12"> &nbsp;</div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Item">
+                                                                <option value="volvo">Item A</option>
+                                                                <option value="saab">Item B</option>
+                                                                <option value="volvo">Item C</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Unit">
+                                                                <option value="volvo">Kg</option>
+                                                                <option value="saab">gm</option>
+                                                                <option value="volvo">Ltr</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Quantity"></div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Price Per Unit"></div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Total Price" disabled></div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Remarks"></div>
+                                                        <!-- <textarea class="form-control " rows="2" placeholder="Remarks"></textarea> -->
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin: 5px;">
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="#" id="addNewForm" class="btn btn-sm btn-info btn-base float-left fl3 mt10"><i
+                                                class="fa fa-plus-square-o"></i> &nbsp; ADD NEW</a>
+
+                                            <div class="float-right text-muted mt-2">
+                                                <h5>Grand Total</h5>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Grand Total" disabled></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+
+                                        <div class="col-md-12 ">
+
+
+                                            <button class="btn btn btn-info btn-base float-right mt15 fr3">Submit</button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--Sayket Client add code End-->
+            </div>
+        </div>
+    </div>
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+    </script>
+    <!-- for datatables -->
+    <!-- jQuery library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+    </script>
+    <!-- Popper JS -->
+
+    <script type="text/javascript" src="js/myscript.js">
+    </script>
+    <script src="js/js.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+
+            $('.select2').select2({
+                closeOnSelect: false
+            });
+        });
+        $('select').selectpicker();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+
+            $('.select2').select2({
+                closeOnSelect: false
+            });
+
+
+            //Clone and Remove Form Fields
+
+            $('#addNewForm').on('click', function() {
+                // $('#exercises').append('<div class="exercise"><input type="text" name="exercise[]"><button class="remove">x</button></div>');
+                $('.allforms').append('<div class="card-body formarea filtercard">\n' +
+                    '                                   <div class="extraform">\n' +
+                    '                                       <div class="row">\n' +
+                    '                                           <div class="col-md-12"> <button  class="btn btn-sm delete-btn float-right remove"><i class="fa fa-trash-o"></i></button></div>\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Item"> <option value = "volvo" > Item A </option>  <option value = "volvo" > Item B </option> <option value = "volvo" > Item C </option>   </select></div>\n' +
+                    '                                           </div>\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Unit"> <option value = "volvo" > Kg </option>  <option value = "volvo" > gm</option> <option value = "volvo" > Ltr </option>   </select></div>\n' +
+                    '                                           </div>\n' +
+                    '\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                   <input class="form-control" type="text[]" placeholder="Quantity"></div>\n' +
+                    '                                           </div>\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                   <input class="form-control" type="text[]" placeholder="Price Per Unit"></div>\n' +
+                    '                                           </div>\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                   <input class="form-control" type="text[]" placeholder="Total Price" disabled></div>\n' +
+                    '                                           </div>\n' +
+                    '                                           <div class="col-md-2">\n' +
+                    '                                               <div class="form-group">\n' +
+                    '                                                   <input class="form-control" type="text[]" placeholder="Remarks"></div>\n' +
+                    '                                           </div>\n' +
+
+                    '\n' +
+                    '                                       </div>\n' +
+                    '                                   </div>\n' +
+                    '                               </div>');
+                return false; //prevent form submission
+            });
+
+            $('.allforms').on('click', '.remove', function() {
+                $(this).parent().parent().parent().parent().remove();
+                return false; //prevent form submission
+            });
+
+        });
+    </script>
+</body>
+
+</html>

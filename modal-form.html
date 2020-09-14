@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Department Management
+		</title>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
+		</script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<div class="sidebar-header">
+					<h3>
+						<a href="index.html"> RMS </a>
+					</h3>
+				</div>
+				<ul class="list-unstyled components">
+					<li>
+						<a href="client management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Client Management </a>
+					</li>
+					<li>
+						<a href="department_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Department Management </a>
+					</li>
+					<li>
+						<a href="team_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Team Management </a>
+					</li>
+					<li>
+						<a href="unit_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Unit Management </a>
+					</li>
+					<li>
+						<a href="requisitions_item_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Requisitions Item
+						Management </a>
+					</li>
+					<li>
+						<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Project
+						Management</a>
+						<ul class="collapse list-unstyled" id="pageSubmenu">
+							<li>
+								<a href="add_new_project.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Project </a>
+							</li>
+							<li>
+								<a href="project_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Projects</a>
+							</li>
+						</ul>
+					</li>
+					<li >
+						<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Site
+						Management</a>
+						<ul class="collapse list-unstyled" id="homeSubmenu">
+							<li>
+								<a href="add_new_site.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Site</a>
+							</li>
+							<li>
+								<a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Sites</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#homeSubmenuRequisition" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-angle-right"></i> Requisition Management</a>
+						<ul class="collapse list-unstyled" id="homeSubmenuRequisition">
+							<li>
+								<a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a>
+							</li>
+							<li>
+								<a href="site_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- Page Content -->
+			<div id="content">
+				<!--Navbar Start-->
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-default">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-bell-o" data-toggle="modal" data-target="#myModal" style=""></i>
+                                </a>
+
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5>Notifications</h5>
+                                                <button class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
+                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="login_form.html">
+                                <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+				<!--Navbar End-->
+				<!--Profile Modal Start-->
+				<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+						<!--Content-->
+						<div class="modal-content">
+							<!--Header-->
+							<div class="modal-header">
+								<img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" alt="avatar" class="rounded-circle img-responsive">
+								<button class="close" data-dismiss="modal">
+									<i class="fas fa-times" style="font-size: 15px;">
+									</i>
+								</button>
+							</div>
+							<!--Body-->
+							<div class="modal-body text-center mb-1">
+								<h3 style="color: palevioletred">
+									Farhana Afreen
+								</h3>
+								<hr>
+								<div class="md-form ml-0 mr-0">
+									<button class="btn btn-cyan mt-1">
+										<i class="fas fa-user" style="margin-right: 5px">
+										</i>
+										Profile
+									</button>
+								</div>
+								<hr>
+								<div class="text-center mt-1">
+									<button class="btn btn-cyan mt-1">
+										<i class="fas fa-cog" style="margin-right: 5px">
+										</i>
+										Setting
+									</button>
+								</div>
+								<hr>
+								<div class="text-center mt-1">
+									<button class="btn btn-cyan mt-1">
+										<i class="fas fa-power-off" style="margin-right: 5px">
+										</i>
+										Log Out
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End Modal: Login with Avatar Form-->
+				<div class="layout_content">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="mb15">
+									<button class="btn btn-sm btn-info btn-base float-right" data-toggle="modal" data-target="#formModal">
+										<i class="fa fa-list" aria-hidden="true">
+										</i>
+										&nbsp; Modal Form 1
+									</button>
+								</div>
+							</div>
+							<!-- Modal -->
+							<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												Modal title
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label for="name">
+															First name:
+															<b class="require-field">
+																*
+															</b>
+														</label>
+														<input type="text" class="form-control" id="name">
+													</div>
+													<!--end single-->
+													<div class="form-group">
+														<label for="lname">
+															Last name:
+															<b class="require-field">
+																*
+															</b>
+														</label>
+														<select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a State" style="width: 100%;" tabindex="-1" aria-hidden="true">
+															<option selected="selected">
+																Alabama
+															</option>
+															<option>
+																Alaska
+															</option>
+															<option>
+																California
+															</option>
+															<option>
+																Delaware
+															</option>
+															<option>
+																Tennessee
+															</option>
+															<option>
+																Texas
+															</option>
+															<option>
+																Washington
+															</option>
+														</select>
+													</div>
+													<!--end single-->
+													<div class="form-group">
+														<label for="lname">
+															Last name:
+															<b class="require-field">
+																*
+															</b>
+														</label>
+														<select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+															<option selected="selected">
+																Alabama
+															</option>
+															<option>
+																Alaska
+															</option>
+															<option>
+																California
+															</option>
+															<option>
+																Delaware
+															</option>
+															<option>
+																Tennessee
+															</option>
+															<option>
+																Texas
+															</option>
+															<option>
+																Washington
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label for="date">
+															Date Picker:
+														</label>
+														<div class="input-group date" data-provide="datepicker">
+															<input type="text" class="form-control">
+															<div class="input-group-addon">
+																<i class="fa fa-th">
+																</i>
+															</div>
+														</div>
+													</div>
+													<!--end single-->
+													<div class="form-group">
+														<label for="phone">
+															Checkboxes:
+														</label>
+														<div class="area-ckeckbox-radio">
+															<div class="checkbox checkbox-warning checkbox-inline">
+																<input type="checkbox" id="inlineCheckbox1" value="option1">
+																<label for="inlineCheckbox1">
+																	Inline One
+																</label>
+															</div>
+															<div class="checkbox checkbox-success checkbox-inline">
+																<input type="checkbox" id="inlineCheckbox2" value="option1" checked="">
+																<label for="inlineCheckbox2">
+																	Inline Two
+																</label>
+															</div>
+															<div class="checkbox checkbox-info checkbox-inline">
+																<input type="checkbox" id="inlineCheckbox3" value="option1">
+																<label for="inlineCheckbox3">
+																	Inline Three
+																</label>
+															</div>
+														</div>
+													</div>
+													<!--end single-->
+													<div class="form-group">
+														<label for="phone">
+															Radio button:
+														</label>
+														<div class="area-ckeckbox-radio">
+															<div class="radio radio-info radio-inline">
+																<input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+																<label for="inlineRadio1">
+																	Inline One
+																</label>
+															</div>
+															<div class="radio radio-inline">
+																<input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+																<label for="inlineRadio2">
+																	Inline Two
+																</label>
+															</div>
+														</div>
+													</div>
+													<!--end single-->
+												</div>
+												<span class="clearfix">
+												</span>
+												<div class="col-md-6">
+													<div class="checkbox">
+														<input id="checkbox1" type="checkbox">
+														<label for="checkbox1">
+															Default
+														</label>
+													</div>
+													<!--end single-->
+													<div class="checkbox checkbox-primary">
+														<input id="checkbox2" type="checkbox" checked="">
+														<label for="checkbox2">
+															Primary
+														</label>
+													</div>
+													<!--end single-->
+													<div class="checkbox checkbox-success">
+														<input id="checkbox3" type="checkbox">
+														<label for="checkbox3">
+															Success
+														</label>
+													</div>
+													<!--end single-->
+													<div class="checkbox checkbox-info">
+														<input id="checkbox4" type="checkbox">
+														<label for="checkbox4">
+															Info
+														</label>
+													</div>
+													<!--end single-->
+													<div class="checkbox checkbox-warning">
+														<input id="checkbox5" type="checkbox" checked="">
+														<label for="checkbox5">
+															Warning
+														</label>
+													</div>
+													<!--end single-->
+													<div class="checkbox checkbox-danger">
+														<input id="checkbox6" type="checkbox" checked="">
+														<label for="checkbox6">
+															Check me out
+														</label>
+													</div>
+													<!--end single-->
+												</div>
+												<div class="col-md-6">
+													<div class="radio">
+														<input type="radio" name="radio1" id="radio1" value="option1" checked="">
+														<label for="radio1">
+															Small
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio">
+														<input type="radio" name="radio1" id="radio2" value="option2">
+														<label for="radio2">
+															Big
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio radio-danger">
+														<input type="radio" name="radio2" id="radio3" value="option1">
+														<label for="radio3">
+															Next
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio radio-danger">
+														<input type="radio" name="radio2" id="radio4" value="option2" checked="">
+														<label for="radio4">
+															One
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio radio-danger">
+														<input type="radio" name="radio3" id="radio5" value="option1" disabled="">
+														<label for="radio5">
+															Next
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio">
+														<input type="radio" name="radio3" id="radio6" value="option2" checked="" disabled="">
+														<label for="radio6">
+															One
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio radio-info radio-inline">
+														<input type="radio" id="inlineRadio3" value="option1" name="radioInline" checked="">
+														<label for="inlineRadio3">
+															Inline One
+														</label>
+													</div>
+													<!--end single-->
+													<div class="radio radio-inline">
+														<input type="radio" id="inlineRadio4" value="option1" name="radioInline">
+														<label for="inlineRadio4">
+															Inline Two
+														</label>
+													</div>
+													<!--end single-->
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="lname">
+															Last name:
+														</label>
+														<textarea class="form-control" placeholder="Textarea Message">
+														</textarea>
+													</div>
+													<!--end single-->
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												Close
+											</button>
+											<button type="button" class="btn btn-primary">
+												Save changes
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Sayket Client add code End-->
+			</div>
+		</div>
+		<!--Bootstrap CDN-->
+		<script src="https://code.jquery.com/jquery-3.5.1.js">
+			 
+		</script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+			 
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+		</script>
+		<!-- for datatables -->
+		<!-- jQuery library -->
+		<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+			 
+		</script>
+		<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+			  
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+		</script>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+		</script>
+		<script type="text/javascript" src="js/myscript.js">
+		</script>
+		<script src="js/js.js">
+			
+		</script>
+		<script>		
+    $(document).ready(function () {
+        $('#example').DataTable();
+        
+        $('.select2').select2({
+closeOnSelect: false
+});
+    });
+		</script>
+	</body>
+
+</html>
