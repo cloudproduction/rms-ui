@@ -749,6 +749,16 @@ a.article:hover {
     color: #fff;
 }
 
+.checkbox-base input[type="checkbox"]:checked+label::before {
+    background-color:  #8BC34A;
+    border-color: #8BC34A;
+}
+
+.checkbox-base input[type="checkbox"]:checked+label::after {
+    color: #fff;
+    top: -1px;
+}
+
 .checkbox-warning input[type="checkbox"]:checked+label::before {
     background-color: #f0ad4e;
     border-color: #f0ad4e;
@@ -1055,16 +1065,24 @@ a.article:hover {
 /* added by sayket */
 
 .login-card {
-    width: 420px;
+    max-width: 360px;
     min-width: 250px;
-    /* box-shadow: #555555; */
+    width: 100%;
+    margin:70px auto;
+    display: block;
+    background: #fff;
+    box-shadow: 0px 1px 4px #c6c6c6;
+    padding: 30px 30px 30px 30px;
+    border-radius: 4px !important;
 }
-
-.login-card-header {
-    background-color: #8BC34A;
-    color: white;
-    border-radius: 25px 25px 0px 0px;
-    margin: 0;
+.login-card .form-group{
+    text-align: left;
+}
+.login-card h3{
+    font-size: 17px;
+    color: #000;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 .login-card .card-header h4 {
@@ -1074,11 +1092,13 @@ a.article:hover {
 }
 
 .login-card-card-body {
-    padding-top: 55px;
-    border-radius: 0px 0px 25px 25px;
-    height: 430px;
-}
 
+    background: #fff;
+}
+.login-card-card-body a:hover{
+    color: #8BC34A;
+    text-decoration: underline;
+}
 .login-card-card-body a {
     color: #8BC34A;
 }
@@ -1115,6 +1135,9 @@ a.article:hover {
 
 .login-bg-color {
     color: #808080;
+    height: 100vh;
+    background:#f2f3e5 url("../images/bg.png") no-repeat center;
+    background-size: cover;
 }
 
 
@@ -1146,4 +1169,25 @@ a.article:hover {
 .btn-light {
     background-color: #fff;
     border-color: #ccc;
+}
+.logo-login{
+    text-align: center;
+    font-size: 38px;
+    color: #8BC34A;
+}
+.newuser{
+    font-size: 15px;
+   color: #000;margin-top: 34px;
+}
+.forgot{
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-card{
+        margin: 30px auto;
+    }
+    .login-bg-color{
+        background-size: contain;
+    }
 }

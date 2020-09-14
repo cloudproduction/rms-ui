@@ -380,6 +380,12 @@
             $('.select2').select2({
                 closeOnSelect: true
             });
+
+            $('.input-group').datepicker({
+                format: "dd/mm/yyyy"
+            }).on('change', function() {
+                $('.datepicker').hide();
+            });
         });
         $('select').selectpicker();
     </script>

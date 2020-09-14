@@ -481,25 +481,22 @@
     </script>
     <script src="js/js.js">
     </script>
+
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
 
             $('.select2').select2({
-                closeOnSelect: false
-            });
-        });
-        $('select').selectpicker();
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-
-            $('.select2').select2({
-                closeOnSelect: false
+                closeOnSelect: true
             });
 
+            $('select').selectpicker();
 
+            $('.input-group').datepicker({
+                format: "dd/mm/yyyy"
+            }).on('change', function() {
+                $('.datepicker').hide();
+            });
             //Clone and Remove Form Fields
 
             $('#addNewForm').on('click', function() {

@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
@@ -334,7 +335,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Requisition Status</label>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Enable</option>
                                                             <option value="saab">Disable</option>
                                                         </select>
@@ -345,7 +346,7 @@
                                                         <label>
                                                             <label>Assigned Client</label>
                                                         </label>
-                                                        <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Client" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" data-placeholder="Select Client" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option >Client A</option>
                                                                 <option value="B">Client B</option>
                                                                 <option value="W">Client C</option>
@@ -359,7 +360,7 @@
                                                         <label>
                                                             <label>Assigned Department</label>
                                                         </label>
-                                                        <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <<option value="A">Department A</option>
                                                             <option value="B">Department B</option>
                                                             <option value="W">Department C</option>
@@ -373,7 +374,7 @@
 
                                                         <label>Assigned Team</label>
 
-                                                        <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select team" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="selectpicker" multiple data-live-search="true">
                                                             <option value="A">Team A</option>
                                                                 <option value="B">Team B</option>
                                                                 <option value="W">Team C</option>
@@ -385,7 +386,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Managerial Approval</label>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Approved</option>
                                                             <option value="saab">Disapproved</option>
                                                         </select>
@@ -395,7 +396,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Administrative Approval</label>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Approved</option>
                                                             <option value="saab">Disapproved</option>
                                                         </select>
@@ -405,7 +406,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Accounts Approval</label>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Approved</option>
                                                             <option value="saab">Disapproved</option>
                                                         </select>
@@ -464,7 +465,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Project Status</label>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Pending</option>
                                                             <option value="saab">Running</option>
                                                             <option value="saab">Complete</option>
@@ -498,30 +499,27 @@
         </div>
     </div>
     <!--Bootstrap CDN-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js ">
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
     </script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js ">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous ">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js ">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
     </script>
     <!-- for datatables -->
     <!-- jQuery library -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js "></script> -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js ">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
     </script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js ">
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js ">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
     </script>
     <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js ">
+
+    <script type="text/javascript" src="js/myscript.js">
     </script>
-    <script type="text/javascript " src="js/myscript.js ">
-    </script>
-    <script src="js/js.js ">
+    <script src="js/js.js">
     </script>
     <script>
         $(document).ready(function() {
@@ -529,6 +527,14 @@
 
             $('.select2').select2({
                 closeOnSelect: false
+            });
+            $('.input-group').datepicker({
+                format: "dd/mm/yyyy"
+            }).on('change', function() {
+                $('.datepicker').hide();
+            });
+            $('select').selectpicker({
+                closeOnSelect: true
             });
         });
     </script>

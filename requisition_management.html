@@ -150,8 +150,9 @@
                                         <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                            <i class="fa fa-pencil"></i>
+                                        <button class="btn btn-sm btn-edit">
+                                            <a href="edit_requisition.html"><i class="fa fa-pencil"> </i> </a>
+                                            
                                         </button>
                                     </div>
                                 </div>
@@ -331,8 +332,9 @@
                                         <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                            <i class="fa fa-pencil"></i>
+                                        <button class="btn btn-sm btn-edit">
+                                            <a href="edit_requisition.html"><i class="fa fa-pencil"> </i> </a>
+                                            
                                         </button>
                                     </div>
                                 </div>
@@ -504,7 +506,7 @@
                             </div>
 
                         </div>
-                        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <!-- <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -649,7 +651,7 @@
                                                             <option value="saab">Mr D</option>
                                                             </select>
                                                     </div>
-                                                    <!--  -->
+                                                
                                                 </div>
                                                 <div class="col-md-4 ">
                                                     <div class="form-group">
@@ -675,7 +677,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
                 </div>
             </div>
@@ -714,6 +717,11 @@
 
             $('.select2').select2({
                 closeOnSelect: false
+            });
+            $('.input-group').datepicker({
+                format: "dd/mm/yyyy"
+            }).on('change', function() {
+                $('.datepicker').hide();
             });
         });
     </script>

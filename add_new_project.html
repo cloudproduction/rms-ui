@@ -225,7 +225,7 @@
                                                     <label>
                                                     <label> Client</label>
                                                     </label>
-                                                    <select class="form-control" data-placeholder="Select Client" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option >Client A</option>
                                                         <option value="B">Client B</option>
                                                         <option value="W">Client C</option>
@@ -239,7 +239,7 @@
                                                     <label>
                                                     <label> Department</label>
                                                     </label>
-                                                    <select class="form-control" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option value="A">Department A</option>
                                                     <option value="B">Department B</option>
                                                     <option value="W">Department C</option>
@@ -316,7 +316,7 @@
                                                     Start Date:
 													</label>
                                                     <div class="input-group date" data-provide="datepicker">
-                                                        <input type="text" class="form-control" placeholder="Start Date">
+                                                        <input type="text" class="form-control" placeholder="Start Date" id=startdate>
                                                         <div class="input-group-addon">
                                                             <i class="fa fa-th">
 															</i>
@@ -356,7 +356,7 @@
                                             <div class="col-md-4 col-sm-6">
                                                 <div class="form-group">
                                                     <label>Project Status</label>
-                                                    <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                     <option selected="selected">Pending</option>
                                                     <option value="saab">Running</option>
                                                     <option value="saab">Complete</option>
@@ -424,8 +424,24 @@
             $('.select2').select2({
                 closeOnSelect: true
             });
+
+            // $('#startdate').datepicker({
+            //     format: "mm/dd/yyyy",
+            //     closeOnSelect: true
+            // });
+            $('.input-group').datepicker({
+                format: "dd/mm/yyyy"
+            }).on('change', function() {
+                $('.datepicker').hide();
+            });
+
+            // $('#startdate').datepicker().on('changeDate', function() {
+            //     $(this).blur();
+            // });
         });
-        $('select').selectpicker();
+        $('select').selectpicker({
+            closeOnSelect: true
+        });
     </script>
 
     <!-- <script>$(document).ready(function() {
