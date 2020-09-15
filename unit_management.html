@@ -66,7 +66,7 @@
                     <ul class="collapse list-unstyled" id="homeSubmenuRequisition">
                         <li><a href="add_new_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Add New Requisition</a></li>
                         <li><a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a></li>
-                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -201,8 +201,8 @@
                                                             <div class="form-group">
                                                                 <label for="exampleFormControlSelect1">Status</label>
                                                                 <select class="form-control" id="exampleFormControlSelect1">
-                                                                    <option selected>Disable</option>
-                                                                    <option>Enable</option>
+                                                                    <option selected>Deactive</option>
+                                                                    <option>Active</option>
                                                                     
     
                                                                 </select>
@@ -261,7 +261,7 @@
 
                                                 <tr>
                                                     <td>Kg</td>
-                                                    <td>Active</td>
+                                                    <td><span class="approved">Active</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -273,23 +273,10 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Ltr</td>
-                                                    <td>Disable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+
                                                 <tr>
                                                     <td>gm</td>
-                                                    <td>Enable</td>
+                                                    <td><span class="approved">Active</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -303,7 +290,38 @@
                                                 </tr>
                                                 <tr>
                                                     <td>kgm</td>
-                                                    <td>Active</td>
+                                                    <td><span class="approved">Active</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>Kg</td>
+                                                    <td><span class="approved">Active</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>gm</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -316,8 +334,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>pound</td>
-                                                    <td>Enable</td>
+                                                    <td>kgm</td>
+                                                    <td><span class="approved">Active</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -332,7 +350,7 @@
 
                                                 <tr>
                                                     <td>Kg</td>
-                                                    <td>Active</td>
+                                                    <td><span class="approved">Active</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -344,234 +362,10 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Ltr</td>
-                                                    <td>Disable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>gm</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>kgm</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>pound</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kg</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ltr</td>
-                                                    <td>Disable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>gm</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>kgm</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>pound</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kg</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ltr</td>
-                                                    <td>Disable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>gm</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>kgm</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>pound</td>
-                                                    <td>Enable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kg</td>
-                                                    <td>Active</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ltr</td>
-                                                    <td>Disable</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                                                <i class="fa fa-trash-o"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
-                                                                <i class="fa fa-pencil"></i>
-                                                            </button>
 
-                                                        </div>
-                                                    </td>
-                                                </tr>
                                                 <tr>
                                                     <td>gm</td>
-                                                    <td>Enable</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -585,7 +379,38 @@
                                                 </tr>
                                                 <tr>
                                                     <td>kgm</td>
-                                                    <td>Active</td>
+                                                    <td><span class="approved">Active</span></td>
+
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Kg</td>
+                                                    <td><span class="approved">Active</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>gm</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -598,8 +423,8 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>pound</td>
-                                                    <td>Enable</td>
+                                                    <td>kgm</td>
+                                                    <td><span class="approved">Active</span></td>
                                                     <td>
                                                         <div>
                                                             <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -611,6 +436,51 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+
+                                                <tr>
+                                                    <td>Kg</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>gm</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>kgm</td>
+                                                    <td><span class="disapproved">Deactive</span></td>
+                                                    <td>
+                                                        <div>
+                                                            <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                                                <i class="fa fa-trash-o"></i>
+                                                            </button>
+                                                            <button class="btn btn-sm btn-edit" data-toggle="modal" data-target="#formModal">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
 
                                             </tbody>
                                             <tfoot>
@@ -660,8 +530,8 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1">Status</label>
                                                     <select class="form-control" id="exampleFormControlSelect1">
-                                                        <option selected>Disable</option>
-                                                        <option>Enable</option>
+                                                        <option selected>Deactive</option>
+                                                        <option>Active</option>
                                                         
         
                                                     </select>
@@ -690,13 +560,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
     <!--Bootstrap CDN-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
@@ -713,25 +576,7 @@
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
     <script type="text/javascript" src="js/myscript.js"></script>
-
-
-    <script src="js/js.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-    </script>
-    <script>
-        function change(iconID) {
-            if (document.getElementById(iconID).className == "fa fa-chevron-circle-up") {
-                document.getElementById(iconID).className = "fa fa-chevron-circle-down";
-            } else {
-                document.getElementById(iconID).className = "fa fa-chevron-circle-up";
-            }
-        }
-    </script>
 </body>
 
 </html>

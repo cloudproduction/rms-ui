@@ -80,7 +80,7 @@
                         <li>
                             <a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
                         </li>
-                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -368,27 +368,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
     </script>
     <!-- Popper JS -->
-
     <script type="text/javascript" src="js/myscript.js">
     </script>
-    <script src="js/js.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
 
-            $('.select2').select2({
-                closeOnSelect: true
-            });
-
-            $('.input-group').datepicker({
-                format: "dd/mm/yyyy"
-            }).on('change', function() {
-                $('.datepicker').hide();
-            });
-        });
-        $('select').selectpicker();
-    </script>
 </body>
 
 </html>

@@ -79,7 +79,7 @@
                         <li>
                             <a href="requisition_management.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> View All Requisition</a>
                         </li>
-                        <li><a href="edit_requisition.html" style="text-decoration: none;"><i class="fa fa-angle-right"></i> Edit Requisition</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -476,75 +476,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
     </script>
     <!-- Popper JS -->
-
     <script type="text/javascript" src="js/myscript.js">
     </script>
-    <script src="js/js.js">
-    </script>
 
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-
-            $('.select2').select2({
-                closeOnSelect: true
-            });
-
-            $('select').selectpicker();
-
-            $('.input-group').datepicker({
-                format: "dd/mm/yyyy"
-            }).on('change', function() {
-                $('.datepicker').hide();
-            });
-            //Clone and Remove Form Fields
-
-            $('#addNewForm').on('click', function() {
-                // $('#exercises').append('<div class="exercise"><input type="text" name="exercise[]"><button class="remove">x</button></div>');
-                $('.allforms').append('<div class="card-body formarea filtercard">\n' +
-                    '                                   <div class="extraform">\n' +
-                    '                                       <div class="row">\n' +
-                    '                                           <div class="col-md-12"> <button  class="btn btn-sm delete-btn float-right remove"><i class="fa fa-trash-o"></i></button></div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Item"> <option value = "volvo" > Item A </option>  <option value = "volvo" > Item B </option> <option value = "volvo" > Item C </option>   </select></div>\n' +
-                    '                                           </div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" placeholder="Unit"> <option value = "volvo" > Kg </option>  <option value = "volvo" > gm</option> <option value = "volvo" > Ltr </option>   </select></div>\n' +
-                    '                                           </div>\n' +
-                    '\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                   <input class="form-control" type="text[]" placeholder="Quantity"></div>\n' +
-                    '                                           </div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                   <input class="form-control" type="text[]" placeholder="Price Per Unit"></div>\n' +
-                    '                                           </div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                   <input class="form-control" type="text[]" placeholder="Total Price" disabled></div>\n' +
-                    '                                           </div>\n' +
-                    '                                           <div class="col-md-2">\n' +
-                    '                                               <div class="form-group">\n' +
-                    '                                                   <input class="form-control" type="text[]" placeholder="Remarks"></div>\n' +
-                    '                                           </div>\n' +
-
-                    '\n' +
-                    '                                       </div>\n' +
-                    '                                   </div>\n' +
-                    '                               </div>');
-                return false; //prevent form submission
-            });
-
-            $('.allforms').on('click', '.remove', function() {
-                $(this).parent().parent().parent().parent().remove();
-                return false; //prevent form submission
-            });
-
-        });
-    </script>
 </body>
 
 </html>
