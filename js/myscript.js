@@ -49,6 +49,10 @@
       $('#example').DataTable();
   });
 
+  // for select2
+  //   $(document).ready(function() {
+  //       $('.select2').select2();
+  //   });
 
 
   function change(iconID) {

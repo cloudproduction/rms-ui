@@ -6,11 +6,13 @@
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
-.form-control:focus{
+
+.form-control:focus {
     border-color: #8bc34a !important;
     outline: none !important;
     box-shadow: none !important;
 }
+
 body {
     /*font-family: 'Poppins', sans-serif;*/
     background: #fafafa;
@@ -570,6 +572,7 @@ a.article:hover {
 
 .table-card .card-body {
     margin: 0;
+    /* font-size: 10px; */
 }
 
 .table-card .table-bordered {
@@ -750,7 +753,7 @@ a.article:hover {
 }
 
 .checkbox-base input[type="checkbox"]:checked+label::before {
-    background-color:  #8BC34A;
+    background-color: #8BC34A;
     border-color: #8BC34A;
 }
 
@@ -1068,17 +1071,19 @@ a.article:hover {
     max-width: 360px;
     min-width: 250px;
     width: 100%;
-    margin:70px auto;
+    margin: 70px auto;
     display: block;
     background: #fff;
     box-shadow: 0px 1px 4px #c6c6c6;
     padding: 30px 30px 30px 30px;
     border-radius: 4px !important;
 }
-.login-card .form-group{
+
+.login-card .form-group {
     text-align: left;
 }
-.login-card h3{
+
+.login-card h3 {
     font-size: 17px;
     color: #000;
     margin-top: 32px;
@@ -1092,13 +1097,14 @@ a.article:hover {
 }
 
 .login-card-card-body {
-
     background: #fff;
 }
-.login-card-card-body a:hover{
+
+.login-card-card-body a:hover {
     color: #8BC34A;
     text-decoration: underline;
 }
+
 .login-card-card-body a {
     color: #8BC34A;
 }
@@ -1136,7 +1142,7 @@ a.article:hover {
 .login-bg-color {
     color: #808080;
     height: 100vh;
-    background:#f2f3e5 url("../images/bg.png") no-repeat center;
+    background: #f2f3e5 url("../images/bg.png") no-repeat center;
     background-size: cover;
 }
 
@@ -1160,34 +1166,49 @@ a.article:hover {
         padding: 5px;
     }
 }
-.dropdown.bootstrap-select{
+
+.dropdown.bootstrap-select {
     width: 100% !important;
 }
-.dropdown.bootstrap-select .dropdown-menu.show{
+
+.dropdown.bootstrap-select .dropdown-menu.show {
     width: 320px !important;
 }
+
 .btn-light {
     background-color: #fff;
     border-color: #ccc;
 }
-.logo-login{
+
+.logo-login {
     text-align: center;
     font-size: 38px;
     color: #8BC34A;
 }
-.newuser{
+
+.newuser {
     font-size: 15px;
-   color: #000;margin-top: 34px;
+    color: #000;
+    margin-top: 34px;
 }
-.forgot{
+
+.forgot {
     font-size: 14px;
 }
 
 @media only screen and (max-width: 600px) {
-    .login-card{
+    .login-card {
         margin: 30px auto;
     }
-    .login-bg-color{
+    .login-bg-color {
         background-size: contain;
     }
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.card-body-list {
+    font-size: 12px;
 }

@@ -147,8 +147,8 @@
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
-                                        <i class="fa fa-info-circle">
-											</i>Site A
+                                        <i class="fa fa-table mr-2">
+											</i> Site A
                                     </h3>
                                     <div class="float-right">
                                         <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -159,7 +159,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="card-body formarea filtercard table-responsive">
+                                <div class="card-body-list formarea filtercard table-responsive">
                                     <table class="table table-bordered mb0">
                                         <tbody>
                                             <tr>
@@ -221,8 +221,8 @@
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
-                                        <i class="fa fa-info-circle">
-											</i>Site B
+                                        <i class="fa fa-table mr-2">
+											</i> Site B
                                     </h3>
                                     <div class="float-right">
                                         <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
@@ -233,7 +233,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="card-body formarea filtercard table-responsive">
+                                <div class="card-body-list formarea filtercard table-responsive">
                                     <table class="table table-bordered mb0">
                                         <tbody>
                                             <tr>
@@ -436,7 +436,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="name">Project</label>
-                                                        <select class="form-control">
+                                                        <select class="selectpicker" multiple data-live-search="true">
                                                             <option value="volvo">Project A</option>
                                                                 <option value="saab">Project B</option>
                                                                 <option value="volvo">Project C</option>
@@ -534,7 +534,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Site Status</label> <br>
-                                                        <select class="form-control">
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                             <option selected="selected">Pending</option>
                                                                 <option value="saab">Running</option>
                                                                 <option value="volvo">Complete</option>
@@ -566,7 +566,14 @@
                                                     </div>
                                                 </div> -->
 
+                                                <div class="col-12">
+                                                    <button class="btn btn btn-info btn-base float-right">
+                                                        <i class="fa fa-save">
+                                                        </i>
+                                                        Submit
+                                                    </button>
 
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
