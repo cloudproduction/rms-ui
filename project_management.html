@@ -6,6 +6,7 @@
     <title>
         View all projects
     </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
     </script>
@@ -104,29 +105,57 @@
 
 
                         <ul class="nav navbar-nav ml-auto">
-
+                            <!-- notificatiton -->
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-bell" data-toggle="modal" data-target="#myModal" style=""></i>
-                                </a>
+                                <div class="dropdown">
+                                    <a class="nav-link" href="#" data-toggle="dropdown" data-target="#dropdownMenuButton2" aria-haspopup="true" aria-expanded="false">
+                                        <div class="bell-icon">
+                                            <i class="fa fa-bell"></i>
+                                        </div>
 
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5>Notifications</h5>
-                                                <button class="close" data-dismiss="modal">&times;</button>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="dropdown-item text-center" href="#"><small class="text-muted">12 Notifications</small> </a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#"><i class="fas fa-envelope mr-1"></i> 4 new messages</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#"><i class="fas fa-users mr-1"></i> 3 new users</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#"> <i class="fas fa-sticky-note mr-1"></i>5 new reports</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item text-center" href="#"><small class="text-muted">see all notifications</small> </a>
                                             </div>
-
                                         </div>
                                     </div>
-                                </div>
                             </li>
 
                             <li class="nav-item">
-                                <a href="" data-toggle="modal" data-target="#modalLoginAvatar">
-                                    <img class="profile-logo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg">
-                                </a>
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown" data-target="#dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                                        <img class="profile-logo" src="images/Profile.png">
+
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">
+                                            <h5>Abdullah Noor</h5>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-user mr-2"></i> Profile
+
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-cog mr-2"></i>Setting
+
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+
+                                            <i class="fas fa-power-off mr-2"></i>Log Out
+
+                                        </a>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="login_form.html">
@@ -134,8 +163,8 @@
                                 </a>
                             </li>
                         </ul>
+                        </div>
                     </div>
-                </div>
             </nav>
             <!--Navbar End-->
             <!--Profile Modal Start-->
@@ -158,7 +187,7 @@
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
-                                        <i class="fa fa-info-circle">
+                                        <i class="fa fa-table mr-1">
 											</i> ERP Management system
                                     </h3>
                                     <div class="float-right">
@@ -170,7 +199,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="card-body formarea filtercard table-responsive">
+                                <div class="card-body-list formarea filtercard table-responsive">
                                     <table class="table table-bordered mb0">
                                         <tbody>
                                             <tr>
@@ -222,10 +251,10 @@
 
                                                 </td>
                                                 <td>
-                                                    Managerial Approval:<br /> <span class="approved">Approved</span>
+                                                    Managerial Approval: <span class="approved">Approved</span>
                                                 </td>
                                                 <td colspan="2">
-                                                    Administrative Approval :<br /> <span class="approved">Approved</span>
+                                                    Administrative Approval : <span class="approved">Approved</span>
                                                 </td>
                                             </tr>
 
@@ -236,7 +265,7 @@
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
-                                        <i class="fa fa-info-circle">
+                                        <i class="fa fa-table mr-1">
 											</i> Inventory Management system
                                     </h3>
                                     <div class="float-right">
@@ -248,7 +277,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="card-body formarea filtercard table-responsive">
+                                <div class="card-body-list formarea filtercard table-responsive">
                                     <table class="table table-bordered mb0">
                                         <tbody>
                                             <tr>
@@ -300,10 +329,10 @@
 
                                                 </td>
                                                 <td>
-                                                    Managerial Approval:<br /> <span class="approved">Approved</span>
+                                                    Managerial Approval: <span class="approved">Approved</span>
                                                 </td>
                                                 <td colspan="2">
-                                                    Administrative Approval :<br /> <span class="approved">Approved</span>
+                                                    Administrative Approval : <span class="approved">Approved</span>
                                                 </td>
                                             </tr>
 
@@ -506,28 +535,28 @@
                 </div>
             </div>
             <!--Sayket Client add code End-->
+            </div>
         </div>
-    </div>
-    <!--Bootstrap CDN-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js">
-    </script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
-    </script>
-    <!-- for datatables -->
-    <!-- jQuery library -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
-    </script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
-    </script>
-    <!-- Popper JS -->
-    <script type="text/javascript" src="js/myscript.js">
-    </script>
+        <!--Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+        </script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+        </script>
+        <!-- for datatables -->
+        <!-- jQuery library -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+        </script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+        </script>
+        <!-- Popper JS -->
+        <script type="text/javascript" src="js/myscript.js">
+        </script>
 
 </body>
 

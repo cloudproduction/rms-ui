@@ -1210,5 +1210,44 @@ a.article:hover {
 }
 
 .card-body-list {
+    font-size: 13px;
+}
+
+.dropdown-item h5 {
+    color: #8bc34a;
+}
+
+.bell-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #8BC34A;
+    border: 0px solid #555555;
+    border-radius: 10px;
+}
+
+.notification {
     font-size: 12px;
+}
+
+.table-card {
+    border: 1px solid #cccccc47 !important;
 }
