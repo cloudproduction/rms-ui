@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7a1c11509a.js" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
@@ -258,11 +259,41 @@
                                                 </tr>
                                                 <tr>
 
+                                                    <td>
+                                                        <form class="form-inline">
+                                                            <div class="form-group">
+                                                                <label>MA</label>
+                                                                <select class="form-control">
+                                                                        <option selected="selected">Pending,</option>
+                                                                        <option value="saab"> approved</option>
+                                                                        <option value="saab">rejected</option>
+                                                                        
+                                                              </select>
+                                                            </div>
+
+                                                        </form>
+
+                                                    </td>
+
+                                                    <td>
+                                                        Administrative Approval: <span class="pending">
+                                                            Pending
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        Accounts Approval : <span class="pending">
+                                                            Pending
+                                                        </span>
+                                                    </td>
+
+
+
+                                                    <!-- 
                                                     <td colspan="4">
                                                         <b>Description:</b>
 
                                                         <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td>
+                                                    </td> -->
 
 
                                                 </tr>
@@ -276,7 +307,7 @@
                                             <div class="card table-card requsition_card">
                                                 <div class="card-header customacc" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                                     <div class="mb-0">
-                                                        <h3 class="float-left title-full"><i class="fa fa-list"></i> Requsition Lists <span class="float-right"><i
+                                                        <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
                                                                     class="fa fa-angle-down " aria-hidden="true"></i></span>
                                                         </h3>
 
@@ -416,13 +447,51 @@
 
 
                                                 </tr>
-                                                <tr>
 
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        Managerial Approval: <span class="approved">
+                                                            Approved
+                                                        </span>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <label>Addministrative  Approval</label>
+                                                        <select class="form-control" style="width: 20%;" tabindex="-1" aria-hidden="true">
+                                                        <option selected="selected">Pending,</option>
+                                                        <option value="saab"> approved,</option>
+                                                        <option value="saab">rejected</option>
+                                                        
+    
+                                                    </select>
+
+                                                    </td>
+                                                    <td>
+                                                        Accounts Approval : <span class="pending">
+                                                            Pending
+                                                        </span>
+                                                    </td>
+
+
+
+                                                    <!-- 
                                                     <td colspan="4">
                                                         <b>Description:</b>
 
                                                         <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td>
+                                                    </td> -->
+
+
+                                                </tr>
+                                                <tr>
+
+                                                    <!-- <td colspan="4">
+                                                        <b>Description:</b>
+
+                                                        <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                    </td> -->
 
 
                                                 </tr>
@@ -436,7 +505,7 @@
                                             <div class="card table-card requsition_card">
                                                 <div class="card-header customacc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                                     <div class="mb-0">
-                                                        <h3 class="float-left title-full"><i class="fa fa-list"></i> Requsition Lists <span class="float-right"><i
+                                                        <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
                                                                     class="fa fa-angle-down " aria-hidden="true"></i></span>
                                                         </h3>
 
@@ -648,13 +717,50 @@
 
 
                                                 </tr>
-                                                <tr>
 
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        Managerial Approval: <span class="approved">
+                                                            Approved
+                                                        </span>
+                                                    </td>
+
+                                                    <td>
+
+                                                        Administrative Approval : <span class="approved">
+                                                            Approved
+                                                        </span>
+
+                                                    </td>
+                                                    <td>
+
+
+                                                        <label>Accounts  Approval</label>
+                                                        <select class="form-control" style="width: 20%;" tabindex="-1" aria-hidden="true">
+                                                        <option selected="selected">Pending,</option>
+                                                        <option value="saab"> approved,</option>
+                                                        <option value="saab">rejected</option>
+                                                    </td>
+
+
+
+                                                    <!-- 
                                                     <td colspan="4">
                                                         <b>Description:</b>
 
                                                         <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td>
+                                                    </td> -->
+
+
+                                                </tr>
+                                                <tr>
+
+                                                    <!-- <td colspan="4">
+                                                        <b>Description:</b>
+
+                                                        <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                    </td> -->
 
 
                                                 </tr>
@@ -668,7 +774,7 @@
                                             <div class="card table-card requsition_card">
                                                 <div class="card-header customacc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                                     <div class="mb-0">
-                                                        <h3 class="float-left title-full"><i class="fa fa-list"></i> Requsition Lists <span class="float-right"><i
+                                                        <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
                                                                     class="fa fa-angle-down " aria-hidden="true"></i></span>
                                                         </h3>
 
@@ -823,154 +929,154 @@
                                                         <option value="volvo">Project C</option>
                                                         <option value="saab">Project D</option>
                                                     </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Site</label><br>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Site</label><br>
+                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
                                                         <option value="volvo">Site A</option>
                                                         <option value="saab">Site B</option>
                                                         <option value="volvo">Site C</option>
                                                         <option value="saab">Site D</option>
                                                     </select>
-                                                    </div>
-                                                </div>
+                                    </div>
+                                </div>
 
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label for="phone">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">
                                                             Working Date:
                                                             </label>
-                                                        <div class="input-group date" data-provide="datepicker">
-                                                            <input type="text" class="form-control" placeholder="Working Date">
-                                                            <div class="input-group-addon">
-                                                                <i class="fa fa-th">
+                                        <div class="input-group date" data-provide="datepicker">
+                                            <input type="text" class="form-control" placeholder="Working Date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-th">
                                                                     </i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label for="phone">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">
                                                             Payment Date:
                                                             </label>
-                                                        <div class="input-group date" data-provide="datepicker">
-                                                            <input type="text" class="form-control" placeholder="Payment Date">
-                                                            <div class="input-group-addon">
-                                                                <i class="fa fa-th">
+                                        <div class="input-group date" data-provide="datepicker">
+                                            <input type="text" class="form-control" placeholder="Payment Date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-th">
                                                                     </i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label for="name"> Payment type</label><br>
-                                                        <select class="form-control select2 select2-hidden-accessible " style="width: 100%; " tabindex="-1 " aria-hidden="true">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name"> Payment type</label><br>
+                                        <select class="form-control select2 select2-hidden-accessible " style="width: 100%; " tabindex="-1 " aria-hidden="true">
                                                             <option value=" volvo "> Mobile banking</option>
                                                             <option value="saab ">check</option>
                                                             <option value="volvo ">cash</option>
                                                             <option value="saab ">others</option>
                                                             </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 ">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 ">
 
-                                                    <div class="form-group ">
-                                                        <label>Payment Remarks</label>
-                                                        <input class="form-control " id="name " name="name " required=" " type="text " placeholder="Payment Remarks">
-                                                    </div>
-                                                </div>
-                                                <div class=" col-md-4 ">
-                                                    <div class="form-group ">
-                                                        <label>Contact No</label>
-                                                        <input class="form-control " id="name1 " name="name1 " required=" " type="text " placeholder="Contact No">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 co-sm-6">
-                                                    <div class="form-group ">
-                                                        <label>Purpose</label>
-                                                        <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
+                                    <div class="form-group ">
+                                        <label>Payment Remarks</label>
+                                        <input class="form-control " id="name " name="name " required=" " type="text " placeholder="Payment Remarks">
+                                    </div>
+                                </div>
+                                <div class=" col-md-4 ">
+                                    <div class="form-group ">
+                                        <label>Contact No</label>
+                                        <input class="form-control " id="name1 " name="name1 " required=" " type="text " placeholder="Contact No">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 co-sm-6">
+                                    <div class="form-group ">
+                                        <label>Purpose</label>
+                                        <input class="form-control " id="name2 " name="name2 " required=" " type="text " placeholder="Purpose">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
 
-                                                        <label for="phone">
+                                        <label for="phone">
                                                             Requisition type
                                                         </label>
-                                                        <div class="area-ckeckbox-radio">
-                                                            <div class="radio radio-info radio-inline">
-                                                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
-                                                                <label for="inlineRadio1">
+                                        <div class="area-ckeckbox-radio">
+                                            <div class="radio radio-info radio-inline">
+                                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                                                <label for="inlineRadio1">
                                                                     Pre Requisition
                                                                 </label>
-                                                            </div>
-                                                            <br>
+                                            </div>
+                                            <br>
 
-                                                            <div class="radio radio-info radio-inline">
-                                                                <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
-                                                                <label for="inlineRadio2">
+                                            <div class="radio radio-info radio-inline">
+                                                <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                                <label for="inlineRadio2">
                                                                     Post Requisition
                                                                 </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-12 ">
-                                                    <div class="form-group ">
-                                                        <label for="comment ">Description</label>
-                                                        <textarea class="form-control " rows="3" id="comment "></textarea>
-                                                    </div>
-                                                </div>
-
-
                                             </div>
-                                            <div class="row ">
-                                                <div class="col-md-4 ">
-                                                    <div class="form-group">
-                                                        <label for="name">Submitted By</label><br>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option value="volvo">Mr A</option>
-                                                            <option value="saab">Mr B</option>
-                                                            <option value="volvo">Mr C</option>
-                                                            <option value="saab">Mr D</option>
-                                                            </select>
-                                                    </div>
-                                                
-                                                </div>
-                                                <div class="col-md-4 ">
-                                                    <div class="form-group">
-                                                        <label for="name">Prepared By</label><br>
-                                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option value="volvo">Mr A</option>
-                                                            <option value="saab">Mr B</option>
-                                                            <option value="volvo">Mr C</option>
-                                                            <option value="saab">Mr D</option>
-                                                            </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
+
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                            Close
-                                        </button>
-                                        <button type="button" class="btn btn-info btn-base">
-                                            Save changes
-                                        </button>
+                                </div>
+
+                                <div class="col-md-12 ">
+                                    <div class="form-group ">
+                                        <label for="comment ">Description</label>
+                                        <textarea class="form-control " rows="3" id="comment "></textarea>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-4 ">
+                                    <div class="form-group">
+                                        <label for="name">Submitted By</label><br>
+                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                            <option value="volvo">Mr A</option>
+                                                            <option value="saab">Mr B</option>
+                                                            <option value="volvo">Mr C</option>
+                                                            <option value="saab">Mr D</option>
+                                                            </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="form-group">
+                                        <label for="name">Prepared By</label><br>
+                                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                            <option value="volvo">Mr A</option>
+                                                            <option value="saab">Mr B</option>
+                                                            <option value="volvo">Mr C</option>
+                                                            <option value="saab">Mr D</option>
+                                                            </select>
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-                        <!-- <div class="table-responsive">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            Close
+                                        </button>
+                            <button type="button" class="btn btn-info btn-base">
+                                            Save changes
+                                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="table-responsive">
                                                             <table class="table table-bordered  ">
                                                                 <tbody>
                                                                     <tr>
@@ -1041,36 +1147,33 @@
                                                             </table>
 
                                                         </div> -->
-                    </div>
-                </div>
-            </div>
-            <!--Sayket Client add code End-->
             </div>
         </div>
-        <!--Bootstrap CDN-->
-        <script src="https://code.jquery.com/jquery-3.5.1.js">
-        </script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
-        </script>
-        <!-- for datatables -->
-        <!-- jQuery library -->
-        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
-        </script>
-        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
-        </script>
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-        </script>
-        <script type="text/javascript" src="js/myscript.js">
-        </script>
+    </div>
+    <!--Sayket Client add code End-->
+    </div>
+    </div>
+    <!--Bootstrap CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+    </script>
+    <!-- for datatables -->
+    <!-- jQuery library -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+    </script>
+    <!-- Popper JS -->
+
+    <script type="text/javascript" src="js/myscript.js">
+    </script>
 
 </body>
 

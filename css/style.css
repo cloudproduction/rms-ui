@@ -993,10 +993,28 @@ a.article:hover {
     border-radius: 3px;
 }
 
+.rejected {
+    background: #feedef;
+    border: 1px solid #fdd1d6;
+    color: #ef2f45;
+    font-size: 13px;
+    padding: 3px 9px;
+    border-radius: 3px;
+}
+
 .approved {
     background: #f3faea;
     border: 1px solid #78ca23;
     color: #78ca23;
+    font-size: 13px;
+    padding: 3px 9px;
+    border-radius: 3px;
+}
+
+.pending {
+    background: #d7ecf9;
+    border: 1px solid #a8d8f4;
+    color: #0b9aec;
     font-size: 13px;
     padding: 3px 9px;
     border-radius: 3px;

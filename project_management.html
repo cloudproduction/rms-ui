@@ -247,14 +247,15 @@
                                                     Assigned Department:
                                                     <span class="base-color">Civil</span>
                                                 </td>
-                                                <td> Accounts Approval: <span class="disapproved">Disapproved</span>
-
+                                                <td>
+                                                    Managerial Approval: <span class="base-color">Mr. Akib</span>
                                                 </td>
                                                 <td>
-                                                    Managerial Approval: <span class="approved">Approved</span>
+                                                    Administrative Approval : <span class="base-color">Mr. Abdullah</span>
+
                                                 </td>
                                                 <td colspan="2">
-                                                    Administrative Approval : <span class="approved">Approved</span>
+                                                    Accounts Approval: <span class="base-color">Mr. Hamid</span>
                                                 </td>
                                             </tr>
 
@@ -325,14 +326,15 @@
                                                     Assigned Department:
                                                     <span class="base-color">Civil</span>
                                                 </td>
-                                                <td> Accounts Approval: <span class="disapproved">Disapproved</span>
-
+                                                <td>
+                                                    Managerial Approval: <span class="base-color">Mr. Akib</span>
                                                 </td>
                                                 <td>
-                                                    Managerial Approval: <span class="approved">Approved</span>
+                                                    Administrative Approval : <span class="base-color">Mr. Abdullah</span>
+
                                                 </td>
                                                 <td colspan="2">
-                                                    Administrative Approval : <span class="approved">Approved</span>
+                                                    Accounts Approval: <span class="base-color">Mr. Hamid</span>
                                                 </td>
                                             </tr>
 
@@ -357,7 +359,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <form action="">
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
@@ -375,60 +377,75 @@
                                                     <div class="form-group">
                                                         <label>Requisition Status</label>
                                                         <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option selected="selected">Enable</option>
-                                                            <option value="saab">Disable</option>
-                                                        </select>
+                                                        <option selected="selected">Enable</option>
+                                                        <option value="saab">Disable</option>
+                                                    </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>
-                                                            <label>Assigned Client</label>
+                                                        <label> Client</label>
                                                         </label>
-                                                        <select class="form-control" data-placeholder="Select Client" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option >Client A</option>
-                                                                <option value="B">Client B</option>
-                                                                <option value="W">Client C</option>
-                                                                <option value="Y">Client D</option>
-                                                        </select>
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <option >Client A</option>
+                                                            <option value="B">Client B</option>
+                                                            <option value="W">Client C</option>
+                                                            <option value="Y">Client D</option>
+                                                    </select>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>
-                                                            <label>Assigned Department</label>
+                                                        <label> Department</label>
                                                         </label>
-                                                        <select class="form-control" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <<option value="A">Department A</option>
-                                                            <option value="B">Department B</option>
-                                                            <option value="W">Department C</option>
-                                                            <option value="Y">Department D</option>
-                                                        </select>
+                                                        <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <option value="A">Department A</option>
+                                                        <option value="B">Department B</option>
+                                                        <option value="W">Department C</option>
+                                                        <option value="Y">Department D</option>
+                                                    </select>
                                                     </div>
                                                 </div>
-
                                                 <div class="col-md-4 col-sm-6">
-                                                    <div class="form-group">
+                                                    <label>
+                                                        <label>Team</label>
+                                                    </label>
+                                                    <select class="selectpicker" multiple data-live-search="true">
+                                                        <option value="A">Team A</option>
+                                                        <option value="B">Team B</option>
+                                                        <option value="W">Team C</option>
+                                                        <option value="Y">Team D</option>
+                                                       </select>
 
-                                                        <label>Assigned Team</label>
-
-                                                        <select class="selectpicker" multiple data-live-search="true">
-                                                            <option value="A">Team A</option>
-                                                                <option value="B">Team B</option>
-                                                                <option value="W">Team C</option>
-                                                                <option value="Y">Team D</option>
-                                                        </select>
-                                                    </div>
                                                 </div>
+
+                                                <!-- <div class="col-md-4 col-sm-6">
+                                                <div class="form-group">
+    
+                                                    <label>Assigned Team</label>
+    
+                                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Select Department" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                        <option value="A">Team A</option>
+                                                            <option value="B">Team B</option>
+                                                            <option value="W">Team C</option>
+                                                            <option value="Y">Team D</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
 
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label>Managerial Approval</label>
                                                         <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option selected="selected">Approved</option>
-                                                            <option value="saab">Disapproved</option>
-                                                        </select>
+                                                        <option selected="selected">MR. Akib</option>
+                                                        <option value="saab"> Mr.Bappy</option>
+                                                        <option value="saab">Mr. kamal</option>
+                                                        <option value="saab">Mr. Hasan</option>
+    
+                                                    </select>
                                                     </div>
                                                 </div>
 
@@ -436,9 +453,11 @@
                                                     <div class="form-group">
                                                         <label>Administrative Approval</label>
                                                         <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option selected="selected">Approved</option>
-                                                            <option value="saab">Disapproved</option>
-                                                        </select>
+                                                            <option selected="selected">MR. Abdullah</option>
+                                                            <option value="saab"> Mr.Jamal</option>
+                                                            <option value="saab">Mr. hasem</option>
+                                                            
+                                                    </select>
                                                     </div>
                                                 </div>
 
@@ -446,9 +465,11 @@
                                                     <div class="form-group">
                                                         <label>Accounts Approval</label>
                                                         <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option selected="selected">Approved</option>
-                                                            <option value="saab">Disapproved</option>
-                                                        </select>
+                                                            <option selected="selected">MR. kawsar</option>
+                                                            <option value="saab"> Mr.Hamid</option>
+                                                            <option value="saab">Mr. Julfikar</option>
+                                                            <option value="saab">Mr. Maruf</option>
+                                                    </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 col-sm-6">
@@ -461,13 +482,13 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="phone">
-                                                            Start Date:
-                                                            </label>
+                                                        Start Date:
+                                                        </label>
                                                         <div class="input-group date" data-provide="datepicker">
-                                                            <input type="text" class="form-control" placeholder="Start Date">
+                                                            <input type="text" class="form-control" placeholder="Start Date" id=startdate>
                                                             <div class="input-group-addon">
                                                                 <i class="fa fa-th">
-                                                                    </i>
+                                                                </i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -475,13 +496,13 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="phone">
-                                                            Expected Completion Date
-                                                            </label>
+                                                        Expected Completion Date
+                                                        </label>
                                                         <div class="input-group date" data-provide="datepicker">
                                                             <input type="text" class="form-control" placeholder=" Expected Completion Date">
                                                             <div class="input-group-addon">
                                                                 <i class="fa fa-th">
-                                                                    </i>
+                                                                </i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -490,13 +511,13 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="phone">
-                                                             Completion Date
-                                                            </label>
+                                                         Completion Date
+                                                        </label>
                                                         <div class="input-group date" data-provide="datepicker">
                                                             <input type="text" class="form-control" placeholder="Completion Date">
                                                             <div class="input-group-addon">
                                                                 <i class="fa fa-th">
-                                                                    </i>
+                                                                </i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -505,12 +526,12 @@
                                                     <div class="form-group">
                                                         <label>Project Status</label>
                                                         <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                            <option selected="selected">Pending</option>
-                                                            <option value="saab">Running</option>
-                                                            <option value="saab">Complete</option>
-                                                            <option value="saab">Handover</option>
-                                                            <option value="saab">Postponed</option>
-                                                        </select>
+                                                        <option selected="selected">Pending</option>
+                                                        <option value="saab">Running</option>
+                                                        <option value="saab">Complete</option>
+                                                        <option value="saab">Handover</option>
+                                                        <option value="saab">Postponed</option>
+                                                    </select>
                                                     </div>
                                                 </div>
 
@@ -555,6 +576,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
         </script>
         <!-- Popper JS -->
+
         <script type="text/javascript" src="js/myscript.js">
         </script>
 
