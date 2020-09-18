@@ -140,18 +140,17 @@
                                             <h5>Abdullah Noor</h5>
                                         </a>
                                         <a class="dropdown-item" href="#">
-                                            <button class="btn btn-cyan"><i class="fas fa-user mr-2" ></i>
-                                            Profile
-                                            </button>
+                                            <i class="fas fa-user mr-2"></i> Profile
+
                                         </a>
                                         <a class="dropdown-item" href="#">
-                                            <button class="btn btn-cyan"><i class="fas fa-cog mr-2" ></i>Setting
-                                            </button>
+                                            <i class="fas fa-cog mr-2"></i>Setting
+
                                         </a>
                                         <a class="dropdown-item" href="#">
-                                            <button class="btn btn-cyan">
-                                                <i class="fas fa-power-off mr-2"></i>Log Out
-                                        </button>
+
+                                            <i class="fas fa-power-off mr-2"></i>Log Out
+
                                         </a>
                                     </div>
                                 </div>
@@ -171,10 +170,10 @@
             <div class="layout_content">
                 <div class="container">
                     <div class="card-header mb-4">
-                        <h3 align="center">View All Requisitions</h3>
+                        <h5 align="center">View All Requisitions</h5>
                     </div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-12">
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
@@ -258,17 +257,22 @@
 
                                                 </tr>
                                                 <tr>
+                                                    <td></td>
 
-                                                    <td>
-                                                        <form class="form-inline">
-                                                            <div class="form-group">
-                                                                <label>MA</label>
-                                                                <select class="form-control">
-                                                                        <option selected="selected">Pending,</option>
-                                                                        <option value="saab"> approved</option>
-                                                                        <option value="saab">rejected</option>
+                                                    <td colspan="">
+                                                        <form>
+                                                            <div class="form-group row">
+                                                                <!-- <label for="" class="ml-3  mt-2">MA</label> -->
+                                                                <label for="" class="ml-3  mt-2" title="Managerial Approval">MA</label>
+                                                                <div class="col-sm-10">
+                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
+                                                                        <option selected="selected">Pending</option>
+                                                                        <option value="saab"> Approved</option>
+                                                                        <option value="saab">Rejected</option>
                                                                         
-                                                              </select>
+
+                                                                    </select>
+                                                                </div>
                                                             </div>
 
                                                         </form>
@@ -276,26 +280,13 @@
                                                     </td>
 
                                                     <td>
-                                                        Administrative Approval: <span class="pending">
-                                                            Pending
-                                                        </span>
+
+                                                        <h6 title="Administrative Approval"> AA: <span class="badge badge-info ml-2">Pending</span></h6>
+
                                                     </td>
                                                     <td>
-                                                        Accounts Approval : <span class="pending">
-                                                            Pending
-                                                        </span>
+                                                        <h6 title="Accounts Approval"> AA: <span class="badge badge-info ml-2">Pending</span></h6>
                                                     </td>
-
-
-
-                                                    <!-- 
-                                                    <td colspan="4">
-                                                        <b>Description:</b>
-
-                                                        <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td> -->
-
-
                                                 </tr>
 
                                             </tbody>
@@ -351,7 +342,14 @@
                                                             <div class="col-md-4"><span class="base-color">lorem ipsom doloripsom dolor orem ipsom 
                                                                 </span> </div>
                                                         </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <b>Description:</b>
 
+                                                                <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                            </div>
+                                                        </div>
 
 
                                                     </div>
@@ -451,27 +449,30 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>
-                                                        Managerial Approval: <span class="approved">
-                                                            Approved
-                                                        </span>
+                                                        <h6 title="Managerial Approval"> MA: <span class="badge badge-success ml-2">Approved</span></h6>
                                                     </td>
 
                                                     <td>
+                                                        <form>
+                                                            <div class="form-group row">
+                                                                <!-- <label for="" class="ml-3  mt-2">MA</label> -->
+                                                                <label for="" class="ml-3  mt-2" title="Addministrative Approval">AA</label>
+                                                                <div class="col-sm-10">
+                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
+                                                                        <option selected="selected">Pending</option>
+                                                                        <option value="saab"> Approved</option>
+                                                                        <option value="saab">Rejected</option>
+                                                                        
 
-                                                        <label>Addministrative  Approval</label>
-                                                        <select class="form-control" style="width: 20%;" tabindex="-1" aria-hidden="true">
-                                                        <option selected="selected">Pending,</option>
-                                                        <option value="saab"> approved,</option>
-                                                        <option value="saab">rejected</option>
-                                                        
-    
-                                                    </select>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
 
                                                     </td>
                                                     <td>
-                                                        Accounts Approval : <span class="pending">
-                                                            Pending
-                                                        </span>
+                                                        <h6 title="Accounts Approval"> AA: <span class="badge badge-info ml-2">Pending</span></h6>
                                                     </td>
 
 
@@ -548,6 +549,14 @@
                                                             <div class="col-md-2"><span class="base-color">500.75 </span></div>
                                                             <div class="col-md-4"><span class="base-color">lorem ipsom doloripsom dolor orem ipsom 
                                                                 </span> </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <b>Description:</b>
+
+                                                                <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                            </div>
                                                         </div>
 
                                                         <!-- <div class="table-responsive">
@@ -721,47 +730,35 @@
                                                 <tr>
                                                     <td></td>
                                                     <td>
-                                                        Managerial Approval: <span class="approved">
-                                                            Approved
-                                                        </span>
+                                                        <h6 title="Managerial Approval"> MA: <span class="badge badge-success ml-2">Approved</span></h6>
                                                     </td>
 
                                                     <td>
 
-                                                        Administrative Approval : <span class="approved">
-                                                            Approved
-                                                        </span>
+                                                        <h6 title="Administrative Approval"> AA: <span class="badge badge-success ml-2">Approved</span></h6>
 
                                                     </td>
+
+
                                                     <td>
+                                                        <form>
+                                                            <div class="form-group row">
 
+                                                                <label for="" class="ml-3  mt-2" title="Accounts Approval">AA</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
+                                                                        <option selected="selected">Pending</option>
+                                                                        <option value="saab"> Approved</option>
+                                                                        <option value="saab">Rejected</option>
+                                                                        
 
-                                                        <label>Accounts  Approval</label>
-                                                        <select class="form-control" style="width: 20%;" tabindex="-1" aria-hidden="true">
-                                                        <option selected="selected">Pending,</option>
-                                                        <option value="saab"> approved,</option>
-                                                        <option value="saab">rejected</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+
                                                     </td>
-
-
-
-                                                    <!-- 
-                                                    <td colspan="4">
-                                                        <b>Description:</b>
-
-                                                        <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td> -->
-
-
-                                                </tr>
-                                                <tr>
-
-                                                    <!-- <td colspan="4">
-                                                        <b>Description:</b>
-
-                                                        <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                    </td> -->
-
 
                                                 </tr>
 
@@ -772,7 +769,7 @@
                                         <div class="accordion" id="accordionExample">
                                             <!-- DM form -->
                                             <div class="card table-card requsition_card">
-                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                                     <div class="mb-0">
                                                         <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
                                                                     class="fa fa-angle-down " aria-hidden="true"></i></span>
@@ -781,7 +778,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div id="collapsefour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                     <div class="card-body">
 
                                                         <div class="row">
@@ -817,6 +814,14 @@
                                                             <div class="col-md-2"><span class="base-color">500.75 </span></div>
                                                             <div class="col-md-4"><span class="base-color">lorem ipsom doloripsom dolor orem ipsom 
                                                                 </span> </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <b>Description:</b>
+
+                                                                <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                            </div>
                                                         </div>
 
                                                         <!-- <div class="table-responsive">
@@ -1076,7 +1081,7 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="table-responsive">
+                        <!-- <div class="table-responsive">
                                                             <table class="table table-bordered  ">
                                                                 <tbody>
                                                                     <tr>
@@ -1147,33 +1152,33 @@
                                                             </table>
 
                                                         </div> -->
+                    </div>
+                </div>
+            </div>
+            <!--Sayket Client add code End-->
             </div>
         </div>
-    </div>
-    <!--Sayket Client add code End-->
-    </div>
-    </div>
-    <!--Bootstrap CDN-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js">
-    </script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
-    </script>
-    <!-- for datatables -->
-    <!-- jQuery library -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
-    </script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
-    </script>
-    <!-- Popper JS -->
+        <!--Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+        </script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js">
+        </script>
+        <!-- for datatables -->
+        <!-- jQuery library -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+        </script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js">
+        </script>
+        <!-- Popper JS -->
 
-    <script type="text/javascript" src="js/myscript.js">
-    </script>
+        <script type="text/javascript" src="js/myscript.js">
+        </script>
 
 </body>
 

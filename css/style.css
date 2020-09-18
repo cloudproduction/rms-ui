@@ -386,7 +386,7 @@ a.article:hover {
 .form-group select {
     background-color: #ffffff;
     width: 100%;
-    min-width: 50px;
+    min-width: 20px;
     height: 38px;
     min-height: 15px;
     box-shadow: none;
@@ -1231,6 +1231,10 @@ a.article:hover {
     font-size: 13px;
 }
 
+.card-body-list h6 {
+    font-size: 13px;
+}
+
 .dropdown-item h5 {
     color: #8bc34a;
 }
@@ -1240,6 +1244,8 @@ a.article:hover {
     font-size: 20px;
 }
 
+
+/* 
 .scroll {
     max-height: 200px;
     overflow-y: auto;
@@ -1260,7 +1266,7 @@ a.article:hover {
     background-color: #8BC34A;
     border: 0px solid #555555;
     border-radius: 10px;
-}
+} */
 
 .notification {
     font-size: 12px;
@@ -1268,4 +1274,9 @@ a.article:hover {
 
 .table-card {
     border: 1px solid #cccccc47 !important;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    border: none;
 }
