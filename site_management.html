@@ -169,8 +169,82 @@
             <!--End Modal: Login with Avatar Form-->
             <div class="layout_content">
                 <div class="container">
-                    <div class="card-header mb-4">
+                    <!-- <div class="card-header mb-4">
                         <h5 align="center">View All Sites</h5>
+
+                    </div> -->
+                    <div class="card table-card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <h3 class="float-left"><i id="addIcon" class="fa fa-chevron-circle-down" style="font:15px;"></i> Filter Result
+                                </h3>
+                                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-sm btn-info btn-base float-right" onclick="change('addIcon')">
+                                <i class="fa fa-search"></i>&nbsp;
+                                Filter Now
+                            </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Project</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected>Project A </option>
+                                                    <option>Project B</option>
+                                                    <option>Project C</option>
+                                                    
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Client</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected>Abdullah</option>
+                                                    <option>Noor</option>
+                                                    <option>Mr. Hasan</option>
+                                                    
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Department</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option selected>Civil</option>
+                                                    <option>Mehcanical</option>
+                                                    <option>Electrical</option>
+                                                    
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <button type="submit" class="btn btn-sm btn-info btn-base float-right">
+                                                Filter
+                                            </button>
+                                        </div>
+                                        <div class="form-group col-md-6">
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -466,7 +540,7 @@
                                                 <div class="col-md-4 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="name">Project</label>
-                                                        <select class="selectpicker" multiple data-live-search="true">
+                                                        <select class="form-control">
                                                             <option value="volvo">Project A</option>
                                                                 <option value="saab">Project B</option>
                                                                 <option value="volvo">Project C</option>
