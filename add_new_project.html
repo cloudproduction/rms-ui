@@ -144,7 +144,7 @@
                                             <i class="fas fa-cog mr-2"></i>Setting
 
                                         </a>
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="login_form.html">
 
                                             <i class="fas fa-power-off mr-2"></i>Log Out
 
@@ -152,11 +152,11 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="login_form.html">
                                     <i class="fas fa-sign-in-alt" data-target="#loginPageModal"></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                         </div>
                     </div>
@@ -213,15 +213,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="mb15">
+                            <!-- <div class="mb15">
                                 <a href="#" class="btn btn-sm btn-info btn-base float-right">
-                                    <i class="fa fa-list" aria-hidden="true"></i> &nbsp; Table List
+                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i> &nbsp; Add New
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3 class="float-left">
-                                        <i class="fa fa-info-circle">
+                                        <i class="fa fa-info-circle mr-1">
 											</i> Add New Project
                                     </h3>
                                 </div>
@@ -254,11 +254,11 @@
                                                     <label>
                                                     <label> Client</label>
                                                     </label>
-                                                    <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                    <option >Client A</option>
-                                                        <option value="B">Client B</option>
-                                                        <option value="W">Client C</option>
-                                                        <option value="Y">Client D</option>
+                                                    <select class="selectpicker" data-live-search="true">
+                                                    <option  data-tokens="A">Client A</option>
+                                                        <option data-tokens="B">Client B</option>
+                                                        <option data-tokens="C">Client C</option>
+                                                        <option data-tokens="D">Client D</option>
                                                 </select>
                                                 </div>
                                             </div>
@@ -268,11 +268,11 @@
                                                     <label>
                                                     <label> Department</label>
                                                     </label>
-                                                    <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                    <option value="A">Department A</option>
-                                                    <option value="B">Department B</option>
-                                                    <option value="W">Department C</option>
-                                                    <option value="Y">Department D</option>
+                                                    <select class="selectpicker" data-live-search="true">
+                                                    <option data-tokens="A">Department A</option>
+                                                    <option data-tokens="B">Department B</option>
+                                                    <option data-tokens="C">Department C</option>
+                                                    <option data-tokens="D">Department D</option>
                                                 </select>
                                                 </div>
                                             </div>
@@ -280,13 +280,11 @@
                                                 <label>
                                                     <label>Team</label>
                                                 </label>
-                                                <select class="form-control">
-                                                    <option value="A">Team A</option>
-                                                    <option value="B">Team B</option>
-                                                    <option value="W">Team C</option>
-                                                    <option value="Y">Team D</option>
-                                                   </select>
-
+                                                <select class="selectpicker" data-live-search="true">
+                                                    <option data-tokens="A">Team A</option>
+                                                    <option data-tokens="B">Team B</option>
+                                                    <option data-tokens="C">Team C</option>
+                                                </select>
                                             </div>
 
                                             <!-- <div class="col-md-4 col-sm-6">

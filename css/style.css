@@ -1189,10 +1189,9 @@ a.article:hover {
     width: 100% !important;
 }
 
-
-/* .dropdown.bootstrap-select .dropdown-menu.show {
-    width: 320px !important;
-} */
+.bootstrap-select .dropdown-menu {
+    width: 100% !important;
+}
 
 .btn-light {
     background-color: #fff;
@@ -1230,6 +1229,8 @@ a.article:hover {
 
 .card-body-list {
     font-size: 13px;
+    /* letter-spacing: 1px; */
+    /* line-height: 2px; */
 }
 
 .card-body-list h6 {
@@ -1289,4 +1290,13 @@ a[aria-expanded="true"] {
     font-size: 14px;
     margin-bottom: 35px;
     /* font-family: ; */
+}
+
+
+/* element.style {
+    min-width: none;
+} */
+
+.dropdown-menu show {
+    /* min-width: 100px !important; */
 }
