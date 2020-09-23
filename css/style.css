@@ -1297,6 +1297,6 @@ a[aria-expanded="true"] {
     min-width: none;
 } */
 
-.dropdown-menu show {
-    /* min-width: 100px !important; */
+.teamMembes {
+    min-width: 100px !important;
 }

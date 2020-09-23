@@ -242,31 +242,41 @@
 
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Site Name</label>
-                                                <input class="form-control" id="name" name="name" required="" type="text" placeholder="Site Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Site ID</label>
-                                                <input class="form-control" id="name" name="name" required="" type="text" placeholder="Site ID ">
-                                            </div>
-                                        </div>
+                                                <label for="exampleFormControlSelect1">Requisition Status</label>
+                                                <select class="form-control" id="exampleFormControlSelect1" title="Select Requisition Status">
+                                                    <option >Enable</option>
+                                                    <option>Disable</option>
 
-
-                                        <div class="col-md-4">
-
-                                            <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Site Status</label>
-                                                <select class="form-control" id="exampleFormControlSelect1" title="Select Site Status">
-                                                    <option >Pending</option>
-                                                    <option>Running</option>
-                                                    <option>Completed</option>
-                                                    <option>Handovered</option>
-                                                    <option>Postponed</option>
                                                     
 
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+
+                                                <label>Team</label>
+
+                                                <select class="selectpicker" data-live-search="true" title="Select Team">
+                                                    <option data-tokens="A">Team A</option>
+                                                    <option data-tokens="B">Team B</option>
+                                                    <option data-tokens="C">Team C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Start Date </label>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control" placeholder="Start Date" id=startdate>
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-th">
+                                                        </i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -277,7 +287,7 @@
                                     <div class="form-row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Start Date </label>
+                                                <label for="exampleFormControlSelect1">Expected Completion Date </label>
                                                 <div class="input-group date" data-provide="datepicker">
                                                     <input type="text" class="form-control" placeholder="Start Date" id=startdate>
                                                     <div class="input-group-addon">
@@ -303,14 +313,21 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Handover  Date </label>
-                                                <div class="input-group date" data-provide="datepicker">
-                                                    <input type="text" class="form-control" placeholder="Start Date" id=startdate>
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-th">
-                                                        </i>
-                                                    </div>
-                                                </div>
+                                                <label>Project Status</label>
+                                                <select class="form-control" title="Select project status">
+                                                <option >Pending</option>
+                                                <option value="saab">Running</option>
+                                                <option value="saab">Complete</option>
+                                                <option value="saab">Handover</option>
+                                                <option value="saab">Postponed</option>
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Project ID</label>
+                                                <input class="form-control" id="PI" name="gender" required="" type="number" placeholder="Project ID">
                                             </div>
                                         </div>
 

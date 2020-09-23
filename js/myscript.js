@@ -39,9 +39,9 @@
 
   });
   // for select2
-  $(document).ready(function() {
-      $('.js-example-basic-multiple').select2();
-  });
+  //   $(document).ready(function() {
+  //       $('.js-example-basic-multiple').select2();
+  //   });
 
   // added by sayket-----------------///////////
 
@@ -71,12 +71,16 @@
       $('.datepicker').hide();
   });
 
+  //   $(function() {
+  //       $('select').selectpicker();
+  //   });
 
   $('select').selectpicker({
       closeOnSelect: true
   });
 
-
+  //   $('select').addClass('col-md-12').selectpicker('setStyle');
+  //   $('.select').addClass('col-md-12').selectpicker('setStyle');
   //Clone and Remove Form Fields
 
   $('#addNewForm').on('click', function() {
