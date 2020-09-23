@@ -4,17 +4,9 @@
       });
   });
 
-
-
-
-  // for datatable
+  //   for datatable
   $(document).ready(function() {
       var table = $('#example').DataTable();
-
-      // $('#example tbody').on('click', 'tr', function () {
-      //     var data = table.row( this ).data();
-      //     alert( 'You clicked on '+data[0]+'\'s row' );
-      // } );
   });
   // for form
   /* Scroll to Top */
@@ -38,12 +30,9 @@
       $('#scroll-to-top').tooltip('show');
 
   });
-  // for select2
-  //   $(document).ready(function() {
-  //       $('.js-example-basic-multiple').select2();
-  //   });
 
-  // added by sayket-----------------///////////
+
+
 
   $(document).ready(function() {
       $('#example').DataTable();
@@ -71,16 +60,10 @@
       $('.datepicker').hide();
   });
 
-  //   $(function() {
-  //       $('select').selectpicker();
-  //   });
-
   $('select').selectpicker({
       closeOnSelect: true
   });
 
-  //   $('select').addClass('col-md-12').selectpicker('setStyle');
-  //   $('.select').addClass('col-md-12').selectpicker('setStyle');
   //Clone and Remove Form Fields
 
   $('#addNewForm').on('click', function() {

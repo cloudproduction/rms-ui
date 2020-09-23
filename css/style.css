@@ -608,7 +608,7 @@ a.article:hover {
 
 .filtercard {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     border: 1px solid #cccccc47;
 }
 
