@@ -132,7 +132,9 @@
                             <li class="nav-item">
                                 <div class="dropdown">
                                     <a href="" data-toggle="dropdown" data-target="#dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-                                        <img class="profile-logo" src="images/Profile.png">
+                                        <div class="user-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
 
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
@@ -305,14 +307,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleFormControlSelect1">Requisition No  </label>
-                                                <select class="selectpicker" data-live-search="true" title="Select Requisition No">
-                                                    <option >2001 </option>
-                                                    <option>2002</option>
-                                                    <option>3005</option>
-                                                    
-                                                    
-
-                                                </select>
+                                                <input class="form-control" id="name" name="name" required="" type="text" placeholder="Requisition no">
                                             </div>
                                         </div>
 
@@ -354,14 +349,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card table-card">
+                            <div class="card table-cards">
                                 <div class="card-header">
                                     <h3 class="float-left">
                                         <i class="fa fa-table mr-1" style="font-size: 16px;">
 											</i> Requisition A
                                     </h3>
                                     <div class="float-right">
-                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="edit_requisition.html">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
                                         <button class="btn btn-sm btn-edit">
@@ -438,21 +433,16 @@
                                                         <b class="mr-1">PB :</b> kamal ahmed khan
                                                         <!-- <span class="base-color">kamal ahmed khan</span> -->
                                                     </td>
-
-
-
-
-
                                                 </tr>
-                                                <tr>
+                                                <tr class="mb-0">
                                                     <td></td>
 
-                                                    <td colspan="">
+                                                    <td>
                                                         <form>
                                                             <div class="form-group row">
-                                                                <!-- <label for="" class="ml-3  mt-2">MA</label> -->
-                                                                <label for="" class="ml-3  mt-2" title="Managerial Approval"><b>MA :</b></label>
-                                                                <div class="col-sm-10">
+
+                                                                <label for="" class="ml-4  mt-2" title="Managerial Approval"><b>MA :</b></label>
+                                                                <div class="col-sm-9">
                                                                     <select class="form-control form-control-sm" id="">
                                                                         <option selected="selected">Pending</option>
                                                                         <option value="saab"> Approved</option>
@@ -469,21 +459,23 @@
 
                                                     <td>
 
-                                                        <h6 title="Administrative Approval"> <b>AA:</b> <span class="badge badge-info ml-2">Pending</span></h6>
+                                                        <h6 title="Administrative Approval"> <b>AA:</b> <span class="badges badge-secondary ml-2">Pending</span></h6>
 
                                                     </td>
                                                     <td>
-                                                        <h6 title="Accounts Approval"> <b>AA:</b> <span class="badge badge-info ml-2">Pending</span></h6>
+                                                        <h6 title="Accounts Approval"> <b>AA:</b> <span class="badges badge-secondary ml-2">Pending</span></h6>
                                                     </td>
                                                 </tr>
 
                                             </tbody>
+
                                         </table>
+
                                     </div>
                                     <div class="accordionform custom-ac">
                                         <div class="accordion" id="accordionExample">
 
-                                            <div class="card table-card requsition_card">
+                                            <div class="card table-cards requsition_card">
                                                 <div class="card-header customacc" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
                                                     <div class="mb-0">
                                                         <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
@@ -551,14 +543,15 @@
                                 </div>
 
                             </div>
-                            <div class="card table-card">
+
+                            <div class="card table-cards">
                                 <div class="card-header">
                                     <h3 class="float-left">
                                         <i class="fa fa-table mr-1" style="font-size: 16px;">
 											</i> Requisition B
                                     </h3>
                                     <div class="float-right">
-                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
+                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="edit_requisition.html">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
                                         <button class="btn btn-sm btn-edit">
@@ -573,26 +566,27 @@
                                             <tbody>
                                                 <tr>
                                                     <td colspan="">
-                                                        Project:
-                                                        <span class="base-color">
+                                                        <b class="mr-1">  Project:</b> ERP management system
+                                                        <!-- <span class="base-color">
                                                                 ERP management system
-                                                            </span>
+                                                            </span> -->
                                                     </td>
                                                     <td colspan="">
-                                                        Site Name :
-                                                        <span class="base-color">
+                                                        <b class="mr-1"> Site Name :</b> SiteA
+                                                        <!-- <span class="base-color">
                                                                 SiteA
-                                                            </span>
+                                                            </span> -->
                                                     </td>
                                                     <td colspan="">
-                                                        Purpose: <span class="base-color">Item purchase </span>
+                                                        <b class="mr-1">Purpose:</b> Item purchase
+                                                        <!-- <span class="base-color">Item purchase </span> -->
                                                     </td>
 
 
 
-                                                    <td colspan="">
-                                                        Payment Remarks:
-                                                        <span class="base-color"> Lorem ipsum dolor</span>
+                                                    <td colspan="" title="Payment Remarks">
+                                                        <b class="mr-1">PR :</b> Lorem ipsum dolor
+                                                        <!-- <span class="base-color"> Lorem ipsum dolor</span> -->
                                                     </td>
 
                                                 </tr>
@@ -600,53 +594,54 @@
 
                                                 <tr>
                                                     <td>
-                                                        Requisition Type
-                                                        <span class="base-color">Prerequisite</span>
+                                                        <b class="mr-1">Requisition Type :</b> Prerequisite
+                                                        <!-- <span class="base-color">Prerequisite</span> -->
                                                     </td>
-                                                    <td colspan="">Working Date:
-                                                        <span class="base-color">20/08/2019</span>
+                                                    <td colspan="" title="Working Date"><b class="mr-1">WD:</b> 20/08/2019
+                                                        <!-- <span class="base-color">20/08/2019</span> -->
+                                                    </td>
+                                                    <td colspan="" title="Payment date">
+                                                        <b class="mr-1"> PD :</b> 20/08/2019
+                                                        <!-- <span class="base-color">20/08/2019</span> -->
                                                     </td>
                                                     <td colspan="">
-                                                        Payment date: <span class="base-color">20/08/2019</span>
-                                                    </td>
-                                                    <td colspan="">
-                                                        Payment type: <span class="base-color">Mobile Banking </span>
+                                                        <b class="mr-1">Payment type:</b> Mobile Banking
+                                                        <!-- <span class="base-color">Mobile Banking </span> -->
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        Requisition Cost: <span class="base-color">15,725</span>
+                                                        <b class="mr-1">Requisition Cost:</b> 15,725
+                                                        <!-- <span class="base-color">15,725</span> -->
                                                     </td>
 
                                                     <td colspan="">
-                                                        Contact No: <span class="base-color">01245835447</span>
+                                                        <b class="mr-1"> Contact No:</b> 01245835447
+                                                        <!-- <span class="base-color">01245835447</span> -->
                                                     </td>
 
-                                                    <td> Submitted By: <span class="base-color">  Akib  ahmed</span>
+                                                    <td title="Submitted By"><b class="mr-1"> SB :</b> Akib ahmed
+                                                        <!-- <span class="base-color">  Akib  ahmed</span> -->
 
                                                     </td>
-                                                    <td colspan="">
-                                                        Prepared by:<span class="base-color">kamal ahmed khan</span> </td>
-
-
-
-
-
+                                                    <td colspan="" title="Prepared by">
+                                                        <b class="mr-1">PB :</b> kamal ahmed khan
+                                                        <!-- <span class="base-color">kamal ahmed khan</span> -->
+                                                    </td>
                                                 </tr>
-
                                                 <tr>
                                                     <td></td>
                                                     <td>
-                                                        <h6 title="Managerial Approval"> MA: <span class="badge badge-success ml-2">Approved</span></h6>
+                                                        <h6 title="Managerial Approval"><b> MA:</b> <span class="badges badge-success ml-2">Approved</span></h6>
                                                     </td>
 
                                                     <td>
                                                         <form>
                                                             <div class="form-group row">
-                                                                <!-- <label for="" class="ml-3  mt-2">MA</label> -->
-                                                                <label for="" class="ml-3  mt-2" title="Addministrative Approval">AA</label>
-                                                                <div class="col-sm-10">
-                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
+
+                                                                <label for="" class="ml-3  mt-2" title="Addministrative Approval"><b>AA :</b></label>
+                                                                <div class="col-sm-9">
+                                                                    <select class="form-control form-control-sm" id="">
                                                                         <option selected="selected">Pending</option>
                                                                         <option value="saab"> Approved</option>
                                                                         <option value="saab">Rejected</option>
@@ -660,22 +655,216 @@
 
                                                     </td>
                                                     <td>
-                                                        <h6 title="Accounts Approval"> AA: <span class="badge badge-info ml-2">Pending</span></h6>
+                                                        <h6 title="Accounts Approval"> AA: <span class="badges badge-secondary ml-2">Pending</span></h6>
                                                     </td>
 
                                                 </tr>
-                                                <tr>
 
-                                                </tr>
 
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="accordionform custom-ac">
                                         <div class="accordion" id="accordionExample">
-                                            <!-- DM form -->
-                                            <div class="card table-card requsition_card">
-                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+
+                                            <div class="card table-cards requsition_card">
+                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="headingOne">
+                                                    <div class="mb-0">
+                                                        <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
+                                                                    class="fa fa-angle-down " aria-hidden="true"></i></span>
+                                                        </h3>
+
+                                                    </div>
+                                                </div>
+
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="card-body">
+
+                                                        <div class="row">
+                                                            <div class="col-md-2"><b>Requisition</b> </div>
+                                                            <div class="col-md-1"><b>Item</b> </div>
+                                                            <div class="col-md-1"><b>Unit</b> </div>
+                                                            <div class="col-md-1"><b>Qty</b></div>
+                                                            <div class="col-md-1"><b>PPUnit</b> </div>
+                                                            <div class="col-md-2"><b>Total Price</b> </div>
+                                                            <div class="col-md-4"><b>Remarks</b><br>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="row">
+                                                            <div class="col-md-2"><span class="">Requisition A</span></div>
+                                                            <div class="col-md-1"><span class="">Item A</span></div>
+                                                            <div class="col-md-1"><span class="">Kg </span></div>
+                                                            <div class="col-md-1"><span class="">75</span></div>
+                                                            <div class="col-md-1"><span class="">20.45</span></div>
+                                                            <div class="col-md-2"><span class="">500.75 </span></div>
+                                                            <div class="col-md-4"><span class="">lorem ipsom dolor orem ipsom 
+                                                          </span>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-2"><span class="">Requisition A</span></div>
+                                                            <div class="col-md-1"><span class="">Item A</span></div>
+                                                            <div class="col-md-1"><span class="">Kg </span></div>
+                                                            <div class="col-md-1"><span class="">75</span></div>
+                                                            <div class="col-md-1"><span class="">20.45</span></div>
+                                                            <div class="col-md-2"><span class="">500.75 </span></div>
+                                                            <div class="col-md-4"><span class="">lorem ipsom doloripsom dolor orem ipsom 
+                                                                </span> </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <b>Description:</b>
+
+                                                                <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card table-cards">
+                                <div class="card-header">
+                                    <h3 class="float-left">
+                                        <i class="fa fa-table mr-1" style="font-size: 16px;">
+											</i> Requisition C
+                                    </h3>
+                                    <div class="float-right">
+                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="edit_requisition.html">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-edit">
+                                            <a href="edit_requisition.html"><i class="fa fa-pencil"> </i> </a>
+                                            
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body-list formarea filtercard table-responsive">
+                                    <div class="teble-responsive">
+                                        <table class="table table-bordered mb0">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="">
+                                                        <b class="mr-1">  Project:</b> ERP management system
+                                                        <!-- <span class="base-color">
+                                                                ERP management system
+                                                            </span> -->
+                                                    </td>
+                                                    <td colspan="">
+                                                        <b class="mr-1"> Site Name :</b> SiteA
+                                                        <!-- <span class="base-color">
+                                                                SiteA
+                                                            </span> -->
+                                                    </td>
+                                                    <td colspan="">
+                                                        <b class="mr-1">Purpose:</b> Item purchase
+                                                        <!-- <span class="base-color">Item purchase </span> -->
+                                                    </td>
+
+
+
+                                                    <td colspan="" title="Payment Remarks">
+                                                        <b class="mr-1">PR :</b> Lorem ipsum dolor
+                                                        <!-- <span class="base-color"> Lorem ipsum dolor</span> -->
+                                                    </td>
+
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        <b class="mr-1">Requisition Type :</b> Prerequisite
+                                                        <!-- <span class="base-color">Prerequisite</span> -->
+                                                    </td>
+                                                    <td colspan="" title="Working Date"><b class="mr-1">WD:</b> 20/08/2019
+                                                        <!-- <span class="base-color">20/08/2019</span> -->
+                                                    </td>
+                                                    <td colspan="" title="Payment date">
+                                                        <b class="mr-1"> PD :</b> 20/08/2019
+                                                        <!-- <span class="base-color">20/08/2019</span> -->
+                                                    </td>
+                                                    <td colspan="">
+                                                        <b class="mr-1">Payment type:</b> Mobile Banking
+                                                        <!-- <span class="base-color">Mobile Banking </span> -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b class="mr-1">Requisition Cost:</b> 15,725
+                                                        <!-- <span class="base-color">15,725</span> -->
+                                                    </td>
+
+                                                    <td colspan="">
+                                                        <b class="mr-1"> Contact No:</b> 01245835447
+                                                        <!-- <span class="base-color">01245835447</span> -->
+                                                    </td>
+
+                                                    <td title="Submitted By"><b class="mr-1"> SB :</b> Akib ahmed
+                                                        <!-- <span class="base-color">  Akib  ahmed</span> -->
+
+                                                    </td>
+                                                    <td colspan="" title="Prepared by">
+                                                        <b class="mr-1">PB :</b> kamal ahmed khan
+                                                        <!-- <span class="base-color">kamal ahmed khan</span> -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <h6 title="Managerial Approval"> <b>MA:</b> <span class="badges badge-success ml-2">Approved</span></h6>
+                                                    </td>
+
+                                                    <td>
+
+                                                        <h6 title="Administrative Approval"> <b>AA:</b> <span class="badges badge-success ml-2">Approved</span></h6>
+
+                                                    </td>
+
+
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group row">
+
+                                                                <label for="" class="ml-3  mt-2" title="Accounts Approval"><b>AA:</b></label>
+                                                                <div class="col-sm-9">
+                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
+                                                                        <option selected="selected">Pending</option>
+                                                                        <option value="saab"> Approved</option>
+                                                                        <option value="saab">Rejected</option>
+                                                                        
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+
+                                                    </td>
+
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="accordionform custom-ac">
+                                        <div class="accordion" id="accordionExample">
+
+                                            <div class="card table-cards requsition_card">
+                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" id="headingOne">
                                                     <div class="mb-0">
                                                         <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
                                                                     class="fa fa-angle-down " aria-hidden="true"></i></span>
@@ -688,37 +877,37 @@
                                                     <div class="card-body">
 
                                                         <div class="row">
-                                                            <div class="col-md-2">Requisition </div>
-                                                            <div class="col-md-1">Item </div>
-                                                            <div class="col-md-1">Unit </div>
-                                                            <div class="col-md-1">Qty</div>
-                                                            <div class="col-md-1">PPUnit </div>
-                                                            <div class="col-md-2">Total Price </div>
-                                                            <div class="col-md-4">Remarks<br>
+                                                            <div class="col-md-2"><b>Requisition</b> </div>
+                                                            <div class="col-md-1"><b>Item</b> </div>
+                                                            <div class="col-md-1"><b>Unit</b> </div>
+                                                            <div class="col-md-1"><b>Qty</b></div>
+                                                            <div class="col-md-1"><b>PPUnit</b> </div>
+                                                            <div class="col-md-2"><b>Total Price</b> </div>
+                                                            <div class="col-md-4"><b>Remarks</b><br>
                                                             </div>
                                                         </div>
                                                         <hr>
 
                                                         <div class="row">
-                                                            <div class="col-md-2"><span class="base-color">Requisition A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Item A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Kg </span></div>
-                                                            <div class="col-md-1"><span class="base-color">75</span></div>
-                                                            <div class="col-md-1"><span class="base-color">20.45</span></div>
-                                                            <div class="col-md-2"><span class="base-color">500.75 </span></div>
-                                                            <div class="col-md-4"><span class="base-color">lorem ipsom dolor orem ipsom 
+                                                            <div class="col-md-2"><span class="">Requisition A</span></div>
+                                                            <div class="col-md-1"><span class="">Item A</span></div>
+                                                            <div class="col-md-1"><span class="">Kg </span></div>
+                                                            <div class="col-md-1"><span class="">75</span></div>
+                                                            <div class="col-md-1"><span class="">20.45</span></div>
+                                                            <div class="col-md-2"><span class="">500.75 </span></div>
+                                                            <div class="col-md-4"><span class="">lorem ipsom dolor orem ipsom 
                                                           </span>
                                                             </div>
                                                         </div>
                                                         <hr>
                                                         <div class="row">
-                                                            <div class="col-md-2"><span class="base-color">Requisition A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Item A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Kg </span></div>
-                                                            <div class="col-md-1"><span class="base-color">75</span></div>
-                                                            <div class="col-md-1"><span class="base-color">20.45</span></div>
-                                                            <div class="col-md-2"><span class="base-color">500.75 </span></div>
-                                                            <div class="col-md-4"><span class="base-color">lorem ipsom doloripsom dolor orem ipsom 
+                                                            <div class="col-md-2"><span class="">Requisition A</span></div>
+                                                            <div class="col-md-1"><span class="">Item A</span></div>
+                                                            <div class="col-md-1"><span class="">Kg </span></div>
+                                                            <div class="col-md-1"><span class="">75</span></div>
+                                                            <div class="col-md-1"><span class="">20.45</span></div>
+                                                            <div class="col-md-2"><span class="">500.75 </span></div>
+                                                            <div class="col-md-4"><span class="">lorem ipsom doloripsom dolor orem ipsom 
                                                                 </span> </div>
                                                         </div>
                                                         <hr>
@@ -729,7 +918,6 @@
                                                                 <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
                                                             </div>
                                                         </div>
-
 
 
                                                     </div>
@@ -744,270 +932,6 @@
 
                             </div>
 
-
-                            <div class="card table-card">
-                                <div class="card-header">
-                                    <h3 class="float-left">
-                                        <i class="fa fa-table mr-1" style="font-size: 16px;">
-											</i> Requisition C
-                                    </h3>
-                                    <div class="float-right">
-                                        <button class="btn btn-sm btn-del mr10" data-toggle="modal" data-target="#">
-                                            <i class="fa fa-trash-o"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-edit">
-                                            <a href="edit_requisition.html"><i class="fa fa-pencil"> </i> </a>
-                                            
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-body-list formarea filtercard table-responsive">
-                                    <div class="teble-responsive">
-                                        <table class="table table-bordered mb0">
-                                            <tbody>
-                                                <tr>
-                                                    <td colspan="">
-                                                        Project:
-                                                        <span class="base-color">
-                                                                ERP management system
-                                                            </span>
-                                                    </td>
-                                                    <td colspan="">
-                                                        Site Name :
-                                                        <span class="base-color">
-                                                                SiteA
-                                                            </span>
-                                                    </td>
-                                                    <td colspan="">
-                                                        Purpose: <span class="base-color">Item purchase </span>
-                                                    </td>
-
-
-
-                                                    <td colspan="">
-                                                        Payment Remarks:
-                                                        <span class="base-color"> Lorem ipsum dolor</span>
-                                                    </td>
-
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>
-                                                        Requisition Type
-                                                        <span class="base-color">Prerequisite</span>
-                                                    </td>
-                                                    <td colspan="">Working Date:
-                                                        <span class="base-color">20/08/2019</span>
-                                                    </td>
-                                                    <td colspan="">
-                                                        Payment date: <span class="base-color">20/08/2019</span>
-                                                    </td>
-                                                    <td colspan="">
-                                                        Payment type: <span class="base-color">Mobile Banking </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        Requisition Cost: <span class="base-color">15,725</span>
-                                                    </td>
-
-                                                    <td colspan="">
-                                                        Contact No: <span class="base-color">01245835447</span>
-                                                    </td>
-
-                                                    <td> Submitted By: <span class="base-color">  Akib  ahmed</span>
-
-                                                    </td>
-                                                    <td colspan="">
-                                                        Prepared by:<span class="base-color">kamal ahmed khan</span> </td>
-
-
-
-
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>
-                                                        <h6 title="Managerial Approval"> MA: <span class="badge badge-success ml-2">Approved</span></h6>
-                                                    </td>
-
-                                                    <td>
-
-                                                        <h6 title="Administrative Approval"> AA: <span class="badge badge-success ml-2">Approved</span></h6>
-
-                                                    </td>
-
-
-                                                    <td>
-                                                        <form>
-                                                            <div class="form-group row">
-
-                                                                <label for="" class="ml-3  mt-2" title="Accounts Approval">AA</label>
-                                                                <div class="col-sm-8">
-                                                                    <select class="form-control form-control-sm" id="colFormLabelSm">
-                                                                        <option selected="selected">Pending</option>
-                                                                        <option value="saab"> Approved</option>
-                                                                        <option value="saab">Rejected</option>
-                                                                        
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                        </form>
-
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="accordionform custom-ac">
-                                        <div class="accordion" id="accordionExample">
-                                            <!-- DM form -->
-                                            <div class="card table-card requsition_card">
-                                                <div class="card-header customacc" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
-                                                    <div class="mb-0">
-                                                        <h3 class="float-left title-full"><i class="fa fa-list mr-1"></i> Details : <span class="float-right"><i
-                                                                    class="fa fa-angle-down " aria-hidden="true"></i></span>
-                                                        </h3>
-
-                                                    </div>
-                                                </div>
-
-                                                <div id="collapsefour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                    <div class="card-body">
-
-                                                        <div class="row">
-                                                            <div class="col-md-2">Requisition </div>
-                                                            <div class="col-md-1">Item </div>
-                                                            <div class="col-md-1">Unit </div>
-                                                            <div class="col-md-1">Qty</div>
-                                                            <div class="col-md-1">PPUnit </div>
-                                                            <div class="col-md-2">Total Price </div>
-                                                            <div class="col-md-4">Remarks<br>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-
-                                                        <div class="row">
-                                                            <div class="col-md-2"><span class="base-color">Requisition A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Item A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Kg </span></div>
-                                                            <div class="col-md-1"><span class="base-color">75</span></div>
-                                                            <div class="col-md-1"><span class="base-color">20.45</span></div>
-                                                            <div class="col-md-2"><span class="base-color">500.75 </span></div>
-                                                            <div class="col-md-4"><span class="base-color">lorem ipsom dolor orem ipsom 
-                                                          </span>
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="row">
-                                                            <div class="col-md-2"><span class="base-color">Requisition A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Item A</span></div>
-                                                            <div class="col-md-1"><span class="base-color">Kg </span></div>
-                                                            <div class="col-md-1"><span class="base-color">75</span></div>
-                                                            <div class="col-md-1"><span class="base-color">20.45</span></div>
-                                                            <div class="col-md-2"><span class="base-color">500.75 </span></div>
-                                                            <div class="col-md-4"><span class="base-color">lorem ipsom doloripsom dolor orem ipsom 
-                                                                </span> </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <b>Description:</b>
-
-                                                                <span class=""> Lorem ipsum dolor sit amet, consectetur adipiscing elitt. Nam tristique molestie lacus sit amet convallis. Aliquam risus erat, tempor eget mollis vitae, tristique non nisi. Morbi bibendum erat sed semper aliquet. </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- <div class="table-responsive">
-                                                            <table class="table table-bordered  ">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Requisition <br><span class="base-color">Requisition A</span>
-                                                                        </td>
-                                                                        <td> Item <br><span class="base-color">Item A</span>
-
-                                                                        </td>
-                                                                        <td>
-                                                                            Unit <br><span class="base-color">Kg </span>
-                                                                        </td>
-                                                                        <td>
-                                                                            Quantity <br> <span class="base-color">75</span>
-                                                                        </td>
-                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
-
-                                                                        </td>
-                                                                        <td>
-                                                                            Total Price <br> <span class="base-color">500.75 </span>
-                                                                        </td>
-
-
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td colspan="6">
-                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
-                                                                        </td>
-
-                                                                    </tr>
-
-
-                                                                </tbody>
-                                                            </table>
-                                                            <table class="table table-bordered  ">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Requisition <br><span class="base-color">Requisition A</span>
-                                                                        </td>
-                                                                        <td> Item <br><span class="base-color">Item A</span>
-
-                                                                        </td>
-                                                                        <td>
-                                                                            Unit <br><span class="base-color">Kg </span>
-                                                                        </td>
-                                                                        <td>
-                                                                            Quantity <br> <span class="base-color">75</span>
-                                                                        </td>
-                                                                        <td> Price Per Unit <br> <span class="base-color">20.45</span>
-
-                                                                        </td>
-                                                                        <td>
-                                                                            Total Price <br> <span class="base-color">500.75 </span>
-                                                                        </td>
-
-
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td colspan="6">
-                                                                            Remarks <br><span class="base-color">lorem ipsom dolor </span>
-                                                                        </td>
-
-                                                                    </tr>
-
-
-                                                                </tbody>
-                                                            </table>
-
-                                                        </div> -->
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
 
                         </div>
 
