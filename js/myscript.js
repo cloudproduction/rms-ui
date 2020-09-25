@@ -10,28 +10,49 @@
   });
   // for form
   /* Scroll to Top */
-  $(document).ready(function() {
-      $(window).scroll(function() {
-          if ($(this).scrollTop() > 50) {
-              $('#scroll-to-top').fadeIn();
-          } else {
-              $('#scroll-to-top').fadeOut();
-          }
-      });
-      // scroll body to 0px on click
-      $('#scroll-to-top').click(function() {
-          $('#scroll-to-top').tooltip('hide');
-          $('body,html').animate({
-              scrollTop: 0
-          }, 800);
-          return false;
-      });
+  //   $(document).ready(function() {
+  //       $(window).scroll(function() {
+  //           if ($(this).scrollTop() > 50) {
+  //               $('#scroll-to-top').fadeIn();
+  //           } else {
+  //               $('#scroll-to-top').fadeOut();
+  //           }
+  //       });
 
-      $('#scroll-to-top').tooltip('show');
+  //       $('#scroll-to-top').click(function() {
+  //           $('#scroll-to-top').tooltip('hide');
+  //           $('body,html').animate({
+  //               scrollTop: 0
+  //           }, 800);
+  //           return false;
+  //       });
 
-  });
+  //       $('#scroll-to-top').tooltip('show');
+
+  //   });
 
 
+  // scrool to top by sayket
+
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() { scrollFunction() };
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+      } else {
+          mybutton.style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
 
 
   $(document).ready(function() {
