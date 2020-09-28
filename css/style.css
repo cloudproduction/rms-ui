@@ -200,6 +200,7 @@ button:hover {
     color: #fff;
     transition: all 0.3s;
     border-right: 1px solid #cccccc26;
+    /* position: fixed; */
 }
 
 #sidebar.active {
@@ -1355,7 +1356,7 @@ a[aria-expanded="true"] {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #FC8701;
+    background-color: #8BC34A;
     color: white;
     cursor: pointer;
     padding: 8px 12px;
