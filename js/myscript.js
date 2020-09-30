@@ -71,11 +71,11 @@
           '                                           <div class="col-md-12"> <button  class="btn btn-sm delete-btn float-right remove"><i class="fa fa-trash-o"></i></button></div>\n' +
           '                                           <div class="col-md-2">\n' +
           '                                               <div class="form-group">\n' +
-          '                                                  <select class="" data-live-search="true"> <option data-tokens="A" > Item A </option>  <option data-tokens="B" > Item B </option> <option data-tokens="C" > Item C </option>   </select></div>\n' +
+          '                                                  <select class="" data-live-search="true" title="Select Item"> <option data-tokens="A" > Item A </option>  <option data-tokens="B" > Item B </option> <option data-tokens="C" > Item C </option>   </select></div>\n' +
           '                                           </div>\n' +
           '                                           <div class="col-md-2">\n' +
           '                                               <div class="form-group">\n' +
-          '                                                  <select class="selectpicker" data-live-search="true" > <option value = "volvo" > Kg </option>  <option value = "volvo" > gm</option> <option value = "volvo" > Ltr </option>   </select></div>\n' +
+          '                                                  <select class="selectpicker" data-live-search="true" title="Select Unit" > <option value = "volvo" > Kg </option>  <option value = "volvo" > gm</option> <option value = "volvo" > Ltr </option>   </select></div>\n' +
           '                                           </div>\n' +
           '\n' +
           '                                           <div class="col-md-2">\n' +
