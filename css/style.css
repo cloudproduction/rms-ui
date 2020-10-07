@@ -1189,18 +1189,19 @@ a.article:hover {
     box-shadow: none;
 }
 
-.text-center .md-form {
+
+/* .text-center .md-form {
     box-shadow: none;
 }
 
 .text-center button {
-    border-radius: 40px;
+    border-radius: 5px;
     background-color: #8BC34A;
 }
 
 .text-center button :hover {
     background-color: #8BC34A;
-}
+} */
 
 .white-text button {
     color: white;
@@ -1365,4 +1366,10 @@ a[aria-expanded="true"] {
 
 #myBtn:hover {
     background-color: black;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
 }
