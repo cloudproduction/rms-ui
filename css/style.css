@@ -590,13 +590,14 @@ a.article:hover {
 .table-card .table-bordered td,
 .table-card .table-bordered th {
     border-color: #cccccc48 !important;
+    /* border-color: #cccccc48 !important; */
 }
 
 
 /* for custom table card */
 
 .table-cards {
-    border: 1px solid #cccccc47;
+    border: 1px solid #cccccc8c !important;
     margin-bottom: 0px;
     margin-top: 30px;
     line-height: 14px;
